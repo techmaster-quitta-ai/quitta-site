@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="DSO (PMR): fórmula do prazo médio de recebimento, exemplo de cálculo, como comparar o número com o prazo que você concedeu e o que faz o indicador cair.">
+<meta name="theme-color" content="#0B1F16">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/icon-180.png">
+<link rel="canonical" href="https://quitta.ai/academy/glossario/dso/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Quitta">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="DSO (PMR): o que é e como calcular · Quitta AI Academy">
+<meta property="og:description" content="DSO (PMR): fórmula do prazo médio de recebimento, exemplo de cálculo, como comparar o número com o prazo que você concedeu e o que faz o indicador cair.">
+<meta property="og:url" content="https://quitta.ai/academy/glossario/dso/">
+<meta property="og:image" content="https://quitta.ai/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DSO (PMR): o que é e como calcular · Quitta AI Academy">
+<meta name="twitter:description" content="DSO (PMR): fórmula do prazo médio de recebimento, exemplo de cálculo, como comparar o número com o prazo que você concedeu e o que faz o indicador cair.">
+<meta name="twitter:image" content="https://quitta.ai/og.png">
+<title>DSO (PMR): o que é e como calcular · Quitta AI Academy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Outfit:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/academy/academy.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://quitta.ai/academy/glossario/dso/",
+      "mainEntityOfPage": "https://quitta.ai/academy/glossario/dso/",
+      "headline": "DSO (PMR): o que é e como calcular",
+      "description": "DSO (PMR): fórmula do prazo médio de recebimento, exemplo de cálculo, como comparar o número com o prazo que você concedeu e o que faz o indicador cair.",
+      "inLanguage": "pt-BR",
+      "datePublished": "2026-08-26",
+      "dateModified": "2026-08-26",
+      "author": {
+        "@id": "https://quitta.ai/#org"
+      },
+      "publisher": {
+        "@id": "https://quitta.ai/#org"
+      },
+      "image": "https://quitta.ai/og.png",
+      "isPartOf": {
+        "@id": "https://quitta.ai/academy/glossario/"
+      },
+      "about": {
+        "@type": "DefinedTerm",
+        "name": "DSO (PMR)",
+        "description": "Prazo médio, em dias, entre a venda e o recebimento — mede a velocidade com que a carteira vira caixa.",
+        "inDefinedTermSet": "https://quitta.ai/academy/glossario/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Academy",
+          "item": "https://quitta.ai/academy/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Glossário da cobrança",
+          "item": "https://quitta.ai/academy/glossario/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "DSO (PMR)",
+          "item": "https://quitta.ai/academy/glossario/dso/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://quitta.ai/#org",
+      "name": "Quitta",
+      "url": "https://quitta.ai/",
+      "logo": "https://quitta.ai/og.png",
+      "image": "https://quitta.ai/og.png",
+      "email": "angelo@quitta.ai",
+      "areaServed": "BR",
+      "knowsLanguage": [
+        "pt-BR",
+        "en"
+      ],
+      "description": "Recuperação de crédito operada por dados para empresas não bancárias: predição título a título, operação extrajudicial e judicial, remuneração acima de piso contratado ou compra de carteira."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "DSO e PMR são a mesma coisa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. PMR, prazo médio de recebimento, é o nome em português do Days Sales Outstanding, e a fórmula é a mesma: contas a receber divididos pela receita do período, multiplicados pelos dias do período. As variações aparecem na base escolhida — receita bruta ou líquida, janela de três ou doze meses. Por isso só faz sentido comparar DSO calculado sempre do mesmo jeito."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual é um bom DSO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O seu prazo contratado mais uma folga operacional pequena. Não existe número universal: quem vende à vista tem DSO baixo por definição e quem financia o cliente em noventa dias tem DSO alto sem estar mal. O parâmetro útil é a distância entre o DSO realizado e o prazo que você concedeu, mais a direção da sua própria série histórica."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Meu DSO caiu, mas a inadimplência continua igual. Como?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Provavelmente as vendas cresceram. O DSO usa receita no denominador: um período forte dilui o saldo antigo e melhora o indicador sem que nenhum título velho tenha sido recebido. Confirme abrindo o aging por faixa e olhando as safras. Se o saldo acima de noventa dias continua igual, quem melhorou foi o número, não a carteira."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="academy">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="q-mark" viewBox="0 0 60 52">
+    <rect x="9.2"  y="5" width="6.5" height="42" rx="3.25" fill="currentColor"/>
+    <rect x="20.9" y="5" width="6.5" height="42" rx="3.25" fill="currentColor"/>
+    <rect x="32.6" y="5" width="6.5" height="42" rx="3.25" fill="currentColor"/>
+    <rect x="44.3" y="5" width="6.5" height="42" rx="3.25" fill="currentColor"/>
+    <line x1="6.5" y1="35.2" x2="53.5" y2="16.8" stroke="#A3E635" stroke-width="5" stroke-linecap="round"/>
+  </symbol>
+</svg>
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+<nav>
+  <div class="wrap nav-in">
+    <a class="logo" href="/" aria-label="Quitta — início">
+      <svg class="mark" width="30" height="26" aria-hidden="true" focusable="false"><use href="#q-mark"/></svg>
+      <span class="wordmark">quitta<span class="dot">.</span></span>
+    </a>
+    <div class="nav-mid">
+      <div class="nav-links">
+        <a href="/#fluxo">Como funciona</a>
+        <a href="/#modelo">Modelo</a>
+      </div>
+      <div class="nav-pages">
+        <a href="/academy/">Academy</a>
+        <a href="/diagnostico/">Diagnóstico</a>
+        <details class="nav-drop">
+          <summary>Setores</summary>
+          <div class="nav-drop-panel">
+            <a href="/setores/operadoras/">Operadoras</a>
+            <a href="/setores/autogestao/">Autogestão</a>
+            <a href="/unimed/">Unimeds</a>
+            <a href="/setores/educacao/">Educação</a>
+            <a href="/setores/condominios/">Condomínios</a>
+            <a href="/setores/distribuidoras/">Distribuidoras</a>
+            <a href="/setores/locacao/">Locação</a>
+          </div>
+        </details>
+        <details class="nav-drop">
+          <summary>Parcerias</summary>
+          <div class="nav-drop-panel">
+            <a href="/bpos/">BPOs &amp; contabilidades</a>
+            <a href="/crms/">CRMs de cobrança</a>
+          </div>
+        </details>
+      </div>
+    </div>
+    <div class="nav-right"><a href="/en/" class="nav-lang" aria-label="Switch language">EN</a><a class="q-btn" href="/#analise">Enviar carteira</a></div>
+  </div>
+</nav>
+
+<main id="main">
+<div class="wrap">
+
+  <nav class="crumb" aria-label="Você está aqui">
+    <ol>
+      <li><a href="/academy/">Academy</a></li>
+      <li><a href="/academy/glossario/">Glossário da cobrança</a></li>
+      <li><span aria-current="page">DSO (PMR)</span></li>
+    </ol>
+  </nav>
+
+  <header class="art-head">
+    <span class="q-eyebrow">Glossário</span>
+    <h1>DSO (PMR): o que é e como calcular</h1>
+    <p class="standfirst">O indicador que mede em quantos dias a venda vira caixa: fórmula, exemplo de cálculo, as duas comparações que valem e as distorções que enganam.</p>
+    <div class="art-meta">
+      <span>Time Quitta</span>
+      <span>Atualizado em 26 ago 2026</span>
+      <span>4 min de leitura</span>
+    </div>
+    <div class="tldr">
+      <span class="k">Resposta rápida</span>
+      <p><strong>DSO (Days Sales Outstanding), ou prazo médio de recebimento, é o número médio de dias que a empresa leva para transformar venda em caixa.</strong> A fórmula usual divide o saldo de contas a receber pela receita do período e multiplica pelos dias desse período. Comparado ao prazo concedido em contrato, o excedente é atraso puro — e é essa diferença que a cobrança ataca.</p>
+    </div>
+  </header>
+
+  <article class="art-body">
+
+    <section id="o-que-e">
+      <h2>O que o DSO mede (e o que não mede)</h2>
+      <p><strong>DSO, sigla de Days Sales Outstanding e traduzido como prazo médio de recebimento ou PMR, é o número médio de dias entre a venda e a entrada do dinheiro.</strong> Ele mede velocidade da carteira inteira — títulos a vencer e vencidos, somados — e não o tamanho da inadimplência.</p><p>Por isso responde a uma pergunta diferente da do <a href="/academy/glossario/aging/">aging</a>. O aging mostra a distribuição do que está em aberto por faixa de atraso; o DSO comprime tudo em um número único, comparável mês a mês, entre filiais e entre linhas de produto. É o indicador que conversa com quem cuida de caixa, não com quem trabalha título a título.</p>
+    </section>
+
+    <section id="como-calcular">
+      <h2>Como calcular o DSO, com exemplo</h2>
+      <p>A fórmula usual toma o saldo de contas a receber, divide pela receita do período e multiplica pelos dias desse período:</p><p><strong>DSO = (contas a receber ÷ receita do período) × dias do período</strong></p><p>Imagine uma empresa com R$ 3 milhões em contas a receber e R$ 12 milhões de receita nos últimos doze meses. A conta: 3 dividido por 12, multiplicado por 365, dá 91 dias de DSO. Se o prazo médio concedido em contrato é de 30 dias, sobram 61 dias de financiamento que o cliente tomou e ninguém aprovou.</p><p>Duas regras de higiene: use sempre a mesma base de receita — bruta ou líquida, com ou sem impostos — em todos os períodos, e mantenha a mesma janela. O valor absoluto importa menos do que a série comparável.</p>
+    </section>
+
+    <section id="como-ler">
+      <h2>As duas comparações que dão sentido ao número</h2>
+      <p>DSO isolado não diz nada; DSO comparado diz muito.</p><ul><li><strong>Contra o prazo que você vendeu.</strong> Se o contrato concede 30 dias e o DSO marca 60, a diferença é atraso, não política comercial. Esse gap é a meta real da cobrança.</li><li><strong>Contra a sua própria série.</strong> Três períodos de alta consecutiva indicam problema na entrada, na emissão do documento ou na régua — dificilmente no mercado.</li></ul><p>Cuidado com duas distorções conhecidas. Crescimento forte de vendas derruba o DSO artificialmente, porque a receita recente engorda o denominador antes de virar atraso; queda de faturamento produz o efeito inverso. Sazonalidade gera o mesmo ruído. Quando o volume oscila, confirme o diagnóstico com o <a href="/academy/glossario/roll-rate/">roll rate</a> e com a <a href="/academy/glossario/vintage/">análise de safras</a>, que não dependem do faturamento do mês.</p>
+    </section>
+
+    <section id="como-reduzir">
+      <h2>O que efetivamente derruba o DSO</h2>
+      <p>O indicador cai por três frentes, nesta ordem de retorno. Na entrada, prazo e limite compatíveis com o risco do cliente — o filtro da <a href="/academy/glossario/analise-de-credito/">análise de crédito</a>. Na emissão, documento correto enviado no mesmo dia, com dados de pagamento que funcionam: boleto errado é atraso fabricado em casa. Na cobrança, contato antes do vencimento e cadência automática nos primeiros dias, como detalham o guia da <a href="/academy/regua-de-cobranca/">régua de cobrança</a> e o de <a href="/academy/cobranca-preventiva/">cobrança preventiva</a>.</p><p>Onde o DSO se encaixa entre os demais indicadores de acompanhamento está no guia de <a href="/academy/indicadores-de-inadimplencia/">indicadores de inadimplência</a>.</p>
+    </section>
+
+    <section id="faq">
+      <h2>Perguntas frequentes</h2>
+      <div class="faq">
+        <details>
+          <summary>DSO e PMR são a mesma coisa?</summary>
+          <div class="a"><p>Sim. PMR, prazo médio de recebimento, é o nome em português do Days Sales Outstanding, e a fórmula é a mesma: contas a receber divididos pela receita do período, multiplicados pelos dias do período. As variações aparecem na base escolhida — receita bruta ou líquida, janela de três ou doze meses. Por isso só faz sentido comparar DSO calculado sempre do mesmo jeito.</p></div>
+        </details>
+        <details>
+          <summary>Qual é um bom DSO?</summary>
+          <div class="a"><p>O seu prazo contratado mais uma folga operacional pequena. Não existe número universal: quem vende à vista tem DSO baixo por definição e quem financia o cliente em noventa dias tem DSO alto sem estar mal. O parâmetro útil é a distância entre o DSO realizado e o prazo que você concedeu, mais a direção da sua própria série histórica.</p></div>
+        </details>
+        <details>
+          <summary>Meu DSO caiu, mas a inadimplência continua igual. Como?</summary>
+          <div class="a"><p>Provavelmente as vendas cresceram. O DSO usa receita no denominador: um período forte dilui o saldo antigo e melhora o indicador sem que nenhum título velho tenha sido recebido. Confirme abrindo o aging por faixa e olhando as safras. Se o saldo acima de noventa dias continua igual, quem melhorou foi o número, não a carteira.</p></div>
+        </details>
+      </div>
+    </section>
+
+    <p class="disclaimer">CONTEÚDO EDUCATIVO — NÃO SUBSTITUI ACONSELHAMENTO JURÍDICO. PARA DECISÕES SOBRE CASOS CONCRETOS, CONSULTE UM ADVOGADO.</p>
+
+  </article>
+
+  <div class="art-cta">
+    <div class="cta-card">
+      <div>
+        <span class="q-eyebrow q-eyebrow--dark">Do conceito à prática</span>
+        <h2>Quanto disso está parado na sua carteira?</h2>
+        <p>A Quitta lê seu histórico de cobrança, prevê a recuperação título a título e devolve um diagnóstico gratuito em 5 dias úteis — com baseline auditado e recomendação objetiva.</p>
+      </div>
+      <form class="cta-form js-lead" novalidate>
+        <input type="hidden" name="origem" value="academy">
+        <input type="hidden" name="pagina" value="dso">
+        <input type="hidden" name="tipo" value="diagnostico">
+        <div class="q-field">
+          <label class="q-label" for="d-empresa">Empresa</label>
+          <input class="q-input" type="text" id="d-empresa" name="empresa" required>
+        </div>
+        <div class="q-field">
+          <label class="q-label" for="d-email">E-mail corporativo</label>
+          <input class="q-input" type="email" id="d-email" name="email" required>
+        </div>
+        <div class="q-field">
+          <label class="q-label" for="d-volume">Volume da carteira em aberto</label>
+          <select class="q-select" id="d-volume" name="volume" required>
+            <option value="" disabled selected>Selecione a faixa</option>
+            <option>Até R$ 500 mil</option>
+            <option>R$ 500 mil – R$ 2 milhões</option>
+            <option>R$ 2 – 10 milhões</option>
+            <option>Acima de R$ 10 milhões</option>
+          </select>
+        </div>
+        <button class="q-btn q-btn--lime" type="submit">Solicitar diagnóstico gratuito</button>
+        <span class="cta-small">SEM CUSTO · SEM EXCLUSIVIDADE NA FASE DE ANÁLISE · NDA PADRÃO</span>
+        <p class="cta-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+
+  <section class="rel" aria-label="Conteúdo relacionado">
+    <span class="q-eyebrow">Continue na trilha</span>
+    <div class="rel-grid" style="margin-top:22px">
+      <a class="card-a" href="/academy/glossario/roll-rate/">
+        <span class="trilha">Glossário</span>
+        <h3>Roll rate: o que é e como usar na cobrança</h3>
+        <p>A taxa de rolagem entre faixas de atraso — o indicador que antecipa a perda antes de ela acontecer.</p>
+        <span class="go">Ler mais →</span>
+      </a>
+      <a class="card-a" href="/academy/glossario/vintage/">
+        <span class="trilha">Glossário</span>
+        <h3>Análise vintage (safra): o que é</h3>
+        <p>Acompanhar cada safra de faturamento separadamente: a única forma honesta de medir recuperação.</p>
+        <span class="go">Ler mais →</span>
+      </a>
+      <a class="card-a" href="/academy/glossario/taxa-de-recuperacao/">
+        <span class="trilha">Glossário</span>
+        <h3>Taxa de recuperação: o que é e como medir</h3>
+        <p>Quanto do que venceu de fato volta — por faixa de atraso, por safra e por canal de cobrança.</p>
+        <span class="go">Ler mais →</span>
+      </a>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap foot-in">
+    <a class="logo" href="/" aria-label="Quitta">
+      <svg class="mark" width="26" height="23" aria-hidden="true" focusable="false"><use href="#q-mark"/></svg>
+      <span class="wordmark">quitta<span class="dot">.</span></span>
+    </a>
+    <span class="foot-tag">contas acertadas.</span>
+    <span class="foot-mono">QUITTA.AI · RECUPERAÇÃO DE CRÉDITO OPERADA POR DADOS · © MMXXVI</span>
+  </div>
+</footer>
+
+<script src="/academy/academy.js" defer></script>
+<script>
+// nav dropdowns — Esc, click-outside, one-menu-at-a-time
+(function(){
+  var drops=[].slice.call(document.querySelectorAll('.nav-drop'));
+  if(!drops.length)return;
+  drops.forEach(function(d){d.addEventListener('toggle',function(){if(d.open)drops.forEach(function(o){if(o!==d)o.open=false;});});});
+  document.addEventListener('click',function(e){drops.forEach(function(d){if(d.open&&!d.contains(e.target))d.open=false;});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')drops.forEach(function(d){if(d.open)d.open=false;});});
+})();
+</script>
+</body>
+</html>
