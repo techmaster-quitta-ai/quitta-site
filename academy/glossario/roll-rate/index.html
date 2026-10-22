@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Roll rate: o que é a taxa de rolagem entre faixas de atraso, como calcular mês a mês e como usar o indicador para antecipar perda e testar a régua.">
+<meta name="theme-color" content="#0B1F16">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/icon-180.png">
+<link rel="canonical" href="https://quitta.ai/academy/glossario/roll-rate/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Quitta">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Roll rate: o que é e como usar na cobrança · Quitta AI Academy">
+<meta property="og:description" content="Roll rate: o que é a taxa de rolagem entre faixas de atraso, como calcular mês a mês e como usar o indicador para antecipar perda e testar a régua.">
+<meta property="og:url" content="https://quitta.ai/academy/glossario/roll-rate/">
+<meta property="og:image" content="https://quitta.ai/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Roll rate: o que é e como usar na cobrança · Quitta AI Academy">
+<meta name="twitter:description" content="Roll rate: o que é a taxa de rolagem entre faixas de atraso, como calcular mês a mês e como usar o indicador para antecipar perda e testar a régua.">
+<meta name="twitter:image" content="https://quitta.ai/og.png">
+<title>Roll rate: o que é e como usar na cobrança · Quitta AI Academy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Outfit:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/academy/academy.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://quitta.ai/academy/glossario/roll-rate/",
+      "mainEntityOfPage": "https://quitta.ai/academy/glossario/roll-rate/",
+      "headline": "Roll rate: o que é e como usar na cobrança",
+      "description": "Roll rate: o que é a taxa de rolagem entre faixas de atraso, como calcular mês a mês e como usar o indicador para antecipar perda e testar a régua.",
+      "inLanguage": "pt-BR",
+      "datePublished": "2026-08-26",
+      "dateModified": "2026-08-26",
+      "author": {
+        "@id": "https://quitta.ai/#org"
+      },
+      "publisher": {
+        "@id": "https://quitta.ai/#org"
+      },
+      "image": "https://quitta.ai/og.png",
+      "isPartOf": {
+        "@id": "https://quitta.ai/academy/glossario/"
+      },
+      "about": {
+        "@type": "DefinedTerm",
+        "name": "Roll rate",
+        "description": "Percentual do saldo de uma faixa de atraso que avança para a faixa seguinte no período seguinte.",
+        "inDefinedTermSet": "https://quitta.ai/academy/glossario/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Academy",
+          "item": "https://quitta.ai/academy/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Glossário da cobrança",
+          "item": "https://quitta.ai/academy/glossario/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Roll rate",
+          "item": "https://quitta.ai/academy/glossario/roll-rate/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://quitta.ai/#org",
+      "name": "Quitta",
+      "url": "https://quitta.ai/",
+      "logo": "https://quitta.ai/og.png",
+      "image": "https://quitta.ai/og.png",
+      "email": "angelo@quitta.ai",
+      "areaServed": "BR",
+      "knowsLanguage": [
+        "pt-BR",
+        "en"
+      ],
+      "description": "Recuperação de crédito operada por dados para empresas não bancárias: predição título a título, operação extrajudicial e judicial, remuneração acima de piso contratado ou compra de carteira."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Roll rate e aging são a mesma coisa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. O aging mostra a distribuição do saldo em aberto por faixa de atraso numa data — é estático. O roll rate compara duas datas e mede quanto do saldo de uma faixa avançou para a seguinte. O aging diz onde a carteira está; o roll rate diz a que velocidade ela está envelhecendo, e por isso antecipa a perda."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual roll rate é aceitável?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não há referência universal: depende do prazo concedido, do setor e do perfil de cliente. O parâmetro é a sua própria série e a direção dela. Uma taxa estável, mesmo que alta, é previsível e provisionável com segurança. Uma taxa que sobe dois ou três períodos seguidos indica que a cobrança perdeu tração ou que a concessão de crédito afrouxou."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como o roll rate ajuda a provisionar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Encadeando as passagens. Sabendo quanto costuma rolar de cada faixa para a seguinte, você projeta quanto do saldo atual deve chegar à faixa mais antiga, onde a recuperação é baixa. Esse percentual, aplicado por faixa, sustenta uma provisão calculada com histórico próprio, em vez de um percentual único aplicado no escuro sobre toda a carteira."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="academy">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="q-mark" viewBox="0 0 60 52">
+    <rect x="9.2"  y="5" width="6.5" height="42" rx="3.25" fill="currentColor"/>
+    <rect x="20.9" y="5" width="6.5" height="42" rx="3.25" fill="currentColor"/>
+    <rect x="32.6" y="5" width="6.5" height="42" rx="3.25" fill="currentColor"/>
+    <rect x="44.3" y="5" width="6.5" height="42" rx="3.25" fill="currentColor"/>
+    <line x1="6.5" y1="35.2" x2="53.5" y2="16.8" stroke="#A3E635" stroke-width="5" stroke-linecap="round"/>
+  </symbol>
+</svg>
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+<nav>
+  <div class="wrap nav-in">
+    <a class="logo" href="/" aria-label="Quitta — início">
+      <svg class="mark" width="30" height="26" aria-hidden="true" focusable="false"><use href="#q-mark"/></svg>
+      <span class="wordmark">quitta<span class="dot">.</span></span>
+    </a>
+    <div class="nav-mid">
+      <div class="nav-links">
+        <a href="/#fluxo">Como funciona</a>
+        <a href="/#modelo">Modelo</a>
+      </div>
+      <div class="nav-pages">
+        <a href="/academy/">Academy</a>
+        <a href="/diagnostico/">Diagnóstico</a>
+        <details class="nav-drop">
+          <summary>Setores</summary>
+          <div class="nav-drop-panel">
+            <a href="/setores/operadoras/">Operadoras</a>
+            <a href="/setores/autogestao/">Autogestão</a>
+            <a href="/unimed/">Unimeds</a>
+            <a href="/setores/educacao/">Educação</a>
+            <a href="/setores/condominios/">Condomínios</a>
+            <a href="/setores/distribuidoras/">Distribuidoras</a>
+            <a href="/setores/locacao/">Locação</a>
+          </div>
+        </details>
+        <details class="nav-drop">
+          <summary>Parcerias</summary>
+          <div class="nav-drop-panel">
+            <a href="/bpos/">BPOs &amp; contabilidades</a>
+            <a href="/crms/">CRMs de cobrança</a>
+          </div>
+        </details>
+      </div>
+    </div>
+    <div class="nav-right"><a href="/en/" class="nav-lang" aria-label="Switch language">EN</a><a class="q-btn" href="/#analise">Enviar carteira</a></div>
+  </div>
+</nav>
+
+<main id="main">
+<div class="wrap">
+
+  <nav class="crumb" aria-label="Você está aqui">
+    <ol>
+      <li><a href="/academy/">Academy</a></li>
+      <li><a href="/academy/glossario/">Glossário da cobrança</a></li>
+      <li><span aria-current="page">Roll rate</span></li>
+    </ol>
+  </nav>
+
+  <header class="art-head">
+    <span class="q-eyebrow">Glossário</span>
+    <h1>Roll rate: o que é e como usar na cobrança</h1>
+    <p class="standfirst">O indicador que mede quanto do saldo de uma faixa de atraso avança para a faixa seguinte — e por que ele piora antes do aging.</p>
+    <div class="art-meta">
+      <span>Time Quitta</span>
+      <span>Atualizado em 26 ago 2026</span>
+      <span>4 min de leitura</span>
+    </div>
+    <div class="tldr">
+      <span class="k">Resposta rápida</span>
+      <p><strong>Roll rate é o percentual do saldo de uma faixa de atraso que avança para a faixa seguinte no período seguinte.</strong> Se o dinheiro parado entre 31 e 60 dias reaparece na faixa de 61 a 90 no mês seguinte, ele rolou — e rolar é o passo anterior à perda. Enquanto o aging fotografa a carteira, o roll rate mede o movimento entre duas fotografias.</p>
+    </div>
+  </header>
+
+  <article class="art-body">
+
+    <section id="o-que-e">
+      <h2>O que é roll rate</h2>
+      <p><strong>Roll rate, ou taxa de rolagem, é o percentual do saldo de uma faixa de atraso que migra para a faixa seguinte no período seguinte.</strong> Ele acompanha um mesmo bloco de dinheiro ao longo do tempo, em vez de olhar o retrato da carteira numa data.</p><p>É essa diferença que o torna útil. O <a href="/academy/glossario/aging/">aging</a> diz quanto está atrasado; o roll rate diz quanto está piorando. Um credor pode ter aging estável e roll rate subindo — sinal de que a deterioração já começou e ainda não apareceu no saldo acumulado da cauda.</p>
+    </section>
+
+    <section id="como-calcular">
+      <h2>Como calcular, passagem por passagem</h2>
+      <p>Compare o mesmo bloco em dois períodos seguidos: divida o valor que apareceu na faixa seguinte pelo valor que estava na faixa de origem no período anterior.</p><p><strong>Roll rate = valor que migrou para a faixa seguinte ÷ saldo da faixa de origem no período anterior</strong></p><p>Imagine R$ 500 mil na faixa de 31 a 60 dias em julho. Em agosto, R$ 150 mil desse mesmo bloco reaparecem na faixa de 61 a 90, e o restante foi pago ou virou acordo. O roll rate dessa passagem foi de 30%. Calcule uma taxa para cada passagem — de 1 a 30 para 31 a 60, de 31 a 60 para 61 a 90, e assim por diante — e acompanhe cada série separadamente.</p><p>Duas regras de higiene: trabalhe com valores, não com quantidade de títulos, e não misture entradas novas no saldo de origem. O que se acompanha é o bloco, não o total da faixa.</p>
+    </section>
+
+    <section id="como-usar">
+      <h2>Três decisões que o roll rate resolve</h2>
+      <ul><li><strong>Alarme antecipado.</strong> A taxa piora antes do aging, porque o movimento aparece antes de o saldo se acumular na cauda. Alta na passagem de 1 a 30 para 31 a 60 é o primeiro sinal de que a régua parou de funcionar.</li><li><strong>Teste de ação.</strong> Mudou o canal, o texto ou o dia do contato? O efeito aparece no roll rate da faixa atacada, isolado do resto da carteira — coisa que nenhum indicador agregado entrega.</li><li><strong>Estimativa de perda.</strong> Encadeando as taxas de passagens sucessivas, você projeta quanto do saldo de hoje deve chegar à faixa mais antiga. É o insumo direto para calibrar a <a href="/academy/glossario/pdd/">provisão para devedores duvidosos</a> com histórico próprio.</li></ul><p>A leitura conjunta com aging, <a href="/academy/glossario/dso/">DSO</a> e safras está no guia de <a href="/academy/indicadores-de-inadimplencia/">indicadores de inadimplência</a>.</p>
+    </section>
+
+    <section id="erros-comuns">
+      <h2>O que distorce a série</h2>
+      <p>O erro mais caro é tratar renegociação como pagamento. Um título que virou acordo sai da faixa e some do roll rate; se o acordo não é honrado, ele volta meses depois, e a carteira parecia melhor do que era. Acompanhe acordos em bloco separado, com sua própria taxa de quebra.</p><p>O segundo erro é olhar uma única passagem: taxas boas nas faixas iniciais convivem com uma cauda parada. O terceiro é comparar períodos com quantidade muito diferente de dias úteis sem ajustar a leitura — feriados deslocam pagamento e criam rolagem que não é comportamento, é calendário. Para separar rolagem de mudança na qualidade do que se vende, cruze com a <a href="/academy/glossario/vintage/">análise de safras</a>.</p>
+    </section>
+
+    <section id="faq">
+      <h2>Perguntas frequentes</h2>
+      <div class="faq">
+        <details>
+          <summary>Roll rate e aging são a mesma coisa?</summary>
+          <div class="a"><p>Não. O aging mostra a distribuição do saldo em aberto por faixa de atraso numa data — é estático. O roll rate compara duas datas e mede quanto do saldo de uma faixa avançou para a seguinte. O aging diz onde a carteira está; o roll rate diz a que velocidade ela está envelhecendo, e por isso antecipa a perda.</p></div>
+        </details>
+        <details>
+          <summary>Qual roll rate é aceitável?</summary>
+          <div class="a"><p>Não há referência universal: depende do prazo concedido, do setor e do perfil de cliente. O parâmetro é a sua própria série e a direção dela. Uma taxa estável, mesmo que alta, é previsível e provisionável com segurança. Uma taxa que sobe dois ou três períodos seguidos indica que a cobrança perdeu tração ou que a concessão de crédito afrouxou.</p></div>
+        </details>
+        <details>
+          <summary>Como o roll rate ajuda a provisionar?</summary>
+          <div class="a"><p>Encadeando as passagens. Sabendo quanto costuma rolar de cada faixa para a seguinte, você projeta quanto do saldo atual deve chegar à faixa mais antiga, onde a recuperação é baixa. Esse percentual, aplicado por faixa, sustenta uma provisão calculada com histórico próprio, em vez de um percentual único aplicado no escuro sobre toda a carteira.</p></div>
+        </details>
+      </div>
+    </section>
+
+    <p class="disclaimer">CONTEÚDO EDUCATIVO — NÃO SUBSTITUI ACONSELHAMENTO JURÍDICO. PARA DECISÕES SOBRE CASOS CONCRETOS, CONSULTE UM ADVOGADO.</p>
+
+  </article>
+
+  <div class="art-cta">
+    <div class="cta-card">
+      <div>
+        <span class="q-eyebrow q-eyebrow--dark">Do conceito à prática</span>
+        <h2>Quanto disso está parado na sua carteira?</h2>
+        <p>A Quitta lê seu histórico de cobrança, prevê a recuperação título a título e devolve um diagnóstico gratuito em 5 dias úteis — com baseline auditado e recomendação objetiva.</p>
+      </div>
+      <form class="cta-form js-lead" novalidate>
+        <input type="hidden" name="origem" value="academy">
+        <input type="hidden" name="pagina" value="roll-rate">
+        <input type="hidden" name="tipo" value="diagnostico">
+        <div class="q-field">
+          <label class="q-label" for="d-empresa">Empresa</label>
+          <input class="q-input" type="text" id="d-empresa" name="empresa" required>
+        </div>
+        <div class="q-field">
+          <label class="q-label" for="d-email">E-mail corporativo</label>
+          <input class="q-input" type="email" id="d-email" name="email" required>
+        </div>
+        <div class="q-field">
+          <label class="q-label" for="d-volume">Volume da carteira em aberto</label>
+          <select class="q-select" id="d-volume" name="volume" required>
+            <option value="" disabled selected>Selecione a faixa</option>
+            <option>Até R$ 500 mil</option>
+            <option>R$ 500 mil – R$ 2 milhões</option>
+            <option>R$ 2 – 10 milhões</option>
+            <option>Acima de R$ 10 milhões</option>
+          </select>
+        </div>
+        <button class="q-btn q-btn--lime" type="submit">Solicitar diagnóstico gratuito</button>
+        <span class="cta-small">SEM CUSTO · SEM EXCLUSIVIDADE NA FASE DE ANÁLISE · NDA PADRÃO</span>
+        <p class="cta-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+
+  <section class="rel" aria-label="Conteúdo relacionado">
+    <span class="q-eyebrow">Continue na trilha</span>
+    <div class="rel-grid" style="margin-top:22px">
+      <a class="card-a" href="/academy/glossario/vintage/">
+        <span class="trilha">Glossário</span>
+        <h3>Análise vintage (safra): o que é</h3>
+        <p>Acompanhar cada safra de faturamento separadamente: a única forma honesta de medir recuperação.</p>
+        <span class="go">Ler mais →</span>
+      </a>
+      <a class="card-a" href="/academy/glossario/taxa-de-recuperacao/">
+        <span class="trilha">Glossário</span>
+        <h3>Taxa de recuperação: o que é e como medir</h3>
+        <p>Quanto do que venceu de fato volta — por faixa de atraso, por safra e por canal de cobrança.</p>
+        <span class="go">Ler mais →</span>
+      </a>
+      <a class="card-a" href="/academy/glossario/churn-involuntario/">
+        <span class="trilha">Glossário</span>
+        <h3>Churn involuntário: o que é e como reduzir</h3>
+        <p>Clientes que saem porque o pagamento falhou, não porque quiseram — o vazamento silencioso da receita recorrente.</p>
+        <span class="go">Ler mais →</span>
+      </a>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap foot-in">
+    <a class="logo" href="/" aria-label="Quitta">
+      <svg class="mark" width="26" height="23" aria-hidden="true" focusable="false"><use href="#q-mark"/></svg>
+      <span class="wordmark">quitta<span class="dot">.</span></span>
+    </a>
+    <span class="foot-tag">contas acertadas.</span>
+    <span class="foot-mono">QUITTA.AI · RECUPERAÇÃO DE CRÉDITO OPERADA POR DADOS · © MMXXVI</span>
+  </div>
+</footer>
+
+<script src="/academy/academy.js" defer></script>
+<script>
+// nav dropdowns — Esc, click-outside, one-menu-at-a-time
+(function(){
+  var drops=[].slice.call(document.querySelectorAll('.nav-drop'));
+  if(!drops.length)return;
+  drops.forEach(function(d){d.addEventListener('toggle',function(){if(d.open)drops.forEach(function(o){if(o!==d)o.open=false;});});});
+  document.addEventListener('click',function(e){drops.forEach(function(d){if(d.open&&!d.contains(e.target))d.open=false;});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')drops.forEach(function(d){if(d.open)d.open=false;});});
+})();
+</script>
+</body>
+</html>
