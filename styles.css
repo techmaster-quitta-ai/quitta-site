@@ -676,3 +676,11 @@ body.page-404 .foot-in{gap:14px}
 .portal-banner .wrap{display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap}
 .portal-banner__btn{background:var(--quitado);color:var(--tinta);padding:.375rem 1rem;border-radius:8px;font-weight:600;font-size:.8125rem;text-decoration:none;white-space:nowrap;transition:opacity .15s}
 .portal-banner__btn:hover{opacity:.85}
+
+/* ---------- Entrar ---------- */
+.nav-right .nav-entrar{display:inline-block}
+.nav-pages > .nav-entrar-pill{display:none}
+@media(max-width:560px){
+  .nav-right .nav-entrar{display:none}
+  .nav-pages > .nav-entrar-pill{display:inline-flex;color:var(--tinta);border-color:var(--tinta)}
+}
