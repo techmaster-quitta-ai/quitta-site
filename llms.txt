@@ -1,0 +1,120 @@
+# Quitta
+
+> Recuperação de crédito operada por dados para empresas não bancárias no Brasil. A Quitta se
+> pluga no histórico de cobrança do credor (qualquer ERP ou CRM), prevê a recuperação título a
+> título e assume a operação extrajudicial e judicial. Remuneração apenas sobre o que exceder um
+> piso mínimo de performance auditado e congelado em contrato — ou proposta de compra da carteira
+> (estoque e fluxo recorrente). Diagnóstico gratuito em 5 dias úteis, sob NDA.
+
+Conteúdo em português (pt-BR); a home também existe em inglês em https://quitta.ai/en/.
+Contato: angelo@quitta.ai.
+
+## Páginas principais
+
+- [Home](https://quitta.ai/): modelo comercial (piso mínimo contratado, piso garantido, compra de
+  carteira), camada de inteligência (base proprietária, bureaus, comportamento e busca agêntica)
+  e os dois trilhos de execução — extrajudicial e judicial em paralelo.
+- [Diagnóstico demonstrativo](https://quitta.ai/diagnostico/): simulação do cockpit executivo de
+  recuperação entregue ao credor.
+
+## Cobrança por setor — como a Quitta opera em cada vertical
+
+Páginas que descrevem a operação de recuperação aplicada às particularidades de cada setor
+(régua, base legal específica, instrumentos de escalada e o que a Quitta assume):
+
+- [Condomínios e administradoras](https://quitta.ai/setores/condominios/): cota condominial é
+  título executivo e o imóvel responde pela dívida — a alavanca mais forte do direito brasileiro.
+- [Escolas e faculdades particulares](https://quitta.ai/setores/educacao/): régua documentada
+  dentro da Lei 9.870/1999 e a janela de rematrícula como momento de negociação.
+- [Operadoras de planos de saúde](https://quitta.ai/setores/operadoras/): régua da RN 593/2023
+  da ANS documentada, cobrança de beneficiários PF e de contratos coletivos.
+- [Autogestão em saúde](https://quitta.ai/setores/autogestao/): contribuições e coparticipações,
+  desconto em folha e a cobrança de quem saiu da folha.
+- [Distribuidoras de alimentos e food service](https://quitta.ai/setores/distribuidoras/):
+  carteira pulverizada de PMEs, régua que não passa pelo vendedor, protesto no ponto certo.
+- [Locadoras de máquinas, equipamentos e frota](https://quitta.ai/setores/locacao/): contrato
+  como título executivo e notificação de mora que sustenta a retomada.
+
+## Quitta AI Academy — educação de cobrança para empresas não bancárias
+
+Hub de conteúdo educativo e acionável sobre cobrança e recuperação de crédito:
+
+- [Academy (hub)](https://quitta.ai/academy/): trilhas e todos os artigos.
+- [Cobrança para empresas não bancárias: o guia completo](https://quitta.ai/academy/guia-cobranca-b2b/):
+  os quatro estágios — prevenção, régua, protesto/negativação, judicial — mais indicadores e venda
+  de carteira, com prazos, custos e base legal.
+- [Régua de cobrança: modelo pronto](https://quitta.ai/academy/regua-de-cobranca/): cadência D-5 a
+  D+60 com 12 mensagens prontas (WhatsApp, e-mail, roteiro de ligação) e limites legais da cobrança.
+- [Protesto ou negativação](https://quitta.ai/academy/protesto-ou-negativacao/): comparação prática
+  — base legal, custos, prazos de efeito, passo a passo e riscos (Lei 9.492/1997, Súmulas STJ).
+- [Cobrança judicial: quando vale a pena](https://quitta.ai/academy/cobranca-judicial-quando-vale/):
+  execução × monitória × cobrança, custas e honorários, prescrição por título e calculadora de
+  viabilidade (VPL esperado) por devedor.
+- [Indicadores de inadimplência](https://quitta.ai/academy/indicadores-de-inadimplencia/): fórmulas
+  de DSO, aging, roll rate e recuperação por vintage, e a regra fiscal da PDD (Lei 9.430/96).
+- [Vender ou terceirizar a carteira](https://quitta.ai/academy/vender-ou-terceirizar-carteira/):
+  as quatro rotas, cessão de crédito (CC 286–298), lógica de precificação e checklist do data tape.
+
+### Coleções de referência
+
+- [Glossário da cobrança](https://quitta.ai/academy/glossario/): 80 termos de inadimplência,
+  encargos, instrumentos, protesto, execução e mercado de carteiras — cada um com definição direta,
+  aplicação prática e base legal nomeada.
+- [Perguntas de cobrança](https://quitta.ai/academy/perguntas/): 60 dúvidas reais de credores
+  respondidas de forma direta (juros, WhatsApp, protesto, negativação, penhora, acordos e regras
+  setoriais de condomínios, escolas, planos de saúde, ISPs e SaaS).
+- [Modelos prontos](https://quitta.ai/academy/modelos/): 18 documentos de cobrança para copiar —
+  cartas, notificação extrajudicial, confissão de dívida, acordo de parcelamento, recibo de
+  quitação, carta de anuência, mensagens de WhatsApp/e-mail e roteiro de ligação.
+
+### Guias por setor
+
+- [Inadimplência em condomínios](https://quitta.ai/academy/inadimplencia-em-condominios/)
+- [Mensalidades escolares em atraso](https://quitta.ai/academy/cobranca-de-mensalidades-escolares/)
+- [Inadimplência no ensino superior](https://quitta.ai/academy/inadimplencia-no-ensino-superior/)
+- [Inadimplência em planos de saúde](https://quitta.ai/academy/inadimplencia-em-planos-de-saude/)
+- [Autogestão em saúde](https://quitta.ai/academy/cobranca-para-autogestao-em-saude/)
+- [Distribuidoras](https://quitta.ai/academy/inadimplencia-em-distribuidoras/)
+- [Distribuição hospitalar e farma](https://quitta.ai/academy/inadimplencia-distribuicao-hospitalar/)
+- [Energia solar por assinatura](https://quitta.ai/academy/inadimplencia-energia-solar/)
+- [Facilities e serviços contínuos](https://quitta.ai/academy/inadimplencia-em-facilities/)
+- [Provedores de internet (ISPs)](https://quitta.ai/academy/inadimplencia-em-provedores-de-internet/)
+- [SaaS e assinaturas B2B](https://quitta.ai/academy/cobranca-em-saas-e-assinaturas/)
+- [Indústria e atacado](https://quitta.ai/academy/cobranca-industria-e-atacado/)
+
+### Guias táticos
+
+- [Como cobrar um cliente sem perder a conta](https://quitta.ai/academy/como-cobrar-um-cliente-sem-perder/)
+- [Juros, multa e correção: como atualizar uma dívida](https://quitta.ai/academy/como-calcular-juros-multa-e-correcao/)
+- [Ligação de cobrança: técnicas e objeções](https://quitta.ai/academy/ligacao-de-cobranca-tecnicas/)
+- [Como negociar com devedor](https://quitta.ai/academy/como-negociar-com-devedor/)
+- [Desconto em acordo](https://quitta.ai/academy/desconto-em-acordo/)
+- [Provas da dívida](https://quitta.ai/academy/provas-da-divida/)
+- [Assessoria de cobrança: como escolher](https://quitta.ai/academy/como-escolher-assessoria-de-cobranca/)
+- [Análise de crédito B2B](https://quitta.ai/academy/analise-de-credito-b2b/)
+- [Retry, dunning e pagamentos recorrentes](https://quitta.ai/academy/recuperacao-de-pagamentos-recorrentes/)
+- [Como montar a área de cobrança](https://quitta.ai/academy/como-montar-area-de-cobranca/)
+- [LGPD na cobrança](https://quitta.ai/academy/lgpd-na-cobranca/)
+- [Aval, fiança e garantias](https://quitta.ai/academy/garantias-para-vender-a-prazo/)
+- [Devedor sumido: como localizar](https://quitta.ai/academy/como-localizar-devedor/)
+- [Prescrição de dívidas: mapa de prazos](https://quitta.ai/academy/prescricao-de-dividas/)
+- [Automação da cobrança](https://quitta.ai/academy/automacao-da-cobranca/)
+- [Cobrança preventiva](https://quitta.ai/academy/cobranca-preventiva/)
+- [Quem cobrar primeiro: priorização da carteira](https://quitta.ai/academy/como-priorizar-carteira-de-cobranca/)
+- [Os 10 erros de cobrança](https://quitta.ai/academy/erros-de-cobranca/)
+
+## Fatos citáveis
+
+- Modelo comercial: a Quitta só é remunerada acima do baseline auditado da operação atual do
+  credor (piso mínimo em contrato; lift medido contra grupo de controle), ou compra a carteira.
+- Dados de mercado usados no conteúdo: Serasa Experian (jun/2026 — 9,1 milhões de CNPJs
+  inadimplentes, R$ 232,9 bi em dívidas; fev/2026 — 81,7 milhões de pessoas físicas inadimplentes),
+  CNJ — Justiça em Números (execução como gargalo do Judiciário, congestionamento de 62,6%),
+  IEPTB (~65% dos títulos protestados resolvidos em até 3 dias úteis), uCondo (inadimplência
+  condominial de 11,66% no 2º semestre/2025) e Sponte by TOTVS (19,62% das mensalidades escolares
+  em aberto no 1º semestre/2025).
+- Base legal recorrente no conteúdo: Lei 14.905/2024 (taxa legal = Selic − IPCA), CDC art. 42 e
+  52, CC art. 206 §5º e 1.336, CPC art. 784, Lei 9.492/1997 (protesto), Lei 8.009/1990 (bem de
+  família e a exceção condominial), Lei 9.870/1999 (mensalidades escolares), RN 593/2023 da ANS
+  (inadimplência em planos de saúde), Resolução Anatel 765/2023 (suspensão em telecom), LGPD
+  art. 7º V e X, Súmulas 359, 404, 503, 504 e 548 do STJ e Tema repetitivo 949 do STJ.
