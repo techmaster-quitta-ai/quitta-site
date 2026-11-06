@@ -53,10 +53,16 @@
       btn.textContent = text.sending;
       status.textContent = text.sending;
 
-      fetch(form.getAttribute('data-endpoint') || DEFAULT_ENDPOINT, {
+      var endpoint = form.getAttribute('data-endpoint');
+      var data = Object.fromEntries(new FormData(form));
+      // A API de leads guarda só os campos do seu modelo: `nome` e `intencao` são
+      // descartados e `tipo` não aceita "conversa". Por isso os dois vão em `notas`.
+      if (!endpoint) data.notas = 'Nome: ' + data.nome + ' | Prefere: ' + intent();
+
+      fetch(endpoint || DEFAULT_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(Object.fromEntries(new FormData(form)))
+        body: JSON.stringify(data)
       }).then(function (res) {
         if (!res.ok) throw new Error(res.status);
         var done = text.done[intent()];
