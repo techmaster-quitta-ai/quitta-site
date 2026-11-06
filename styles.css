@@ -685,17 +685,9 @@ body.page-404 .foot-in{gap:14px}
   .nav-pages > .nav-entrar-pill{display:inline-flex;color:var(--tinta);border-color:var(--tinta)}
 }
 
-/* formulário de contato: conversa ou diagnóstico */
-.lead-intent{border:0;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.lead-intent legend{padding:0;margin-bottom:7px}
-.lead-intent label{display:flex;align-items:center;gap:8px;padding:12px 14px;border:1px solid var(--border-field);
-  border-radius:var(--radius-input);color:var(--branco);font-size:14px;cursor:pointer}
-.lead-intent input{accent-color:var(--quitado);margin:0;flex-shrink:0}
-.lead-intent label:has(input:checked){border-color:var(--quitado)}
-.lead-intent label:has(input:focus-visible){outline:2px solid var(--focus-ring);outline-offset:2px}
+/* formulário de contato */
 .cta-card .lead-note{font-size:13px;line-height:1.5;margin:0;max-width:none}
 .cta-card .lead-note a,.cta-status a{color:inherit;text-decoration:underline}
 .cta-copy-chips{display:flex;flex-direction:column;gap:18px;margin-top:28px;position:relative;z-index:1}
 .inline-cta{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:36px}
 .inline-cta p{margin:0}
-@media (max-width:520px){.lead-intent{grid-template-columns:1fr}}

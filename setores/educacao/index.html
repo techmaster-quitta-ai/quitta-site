@@ -109,7 +109,7 @@
         <a class="nav-entrar-pill" href="https://app.quitta.ai/login">Entrar</a>
       </div>
     </div>
-    <div class="nav-right"><a href="/en/" class="nav-lang" aria-label="Switch language">EN</a><a class="nav-entrar" href="https://app.quitta.ai/login">Entrar</a><a class="q-btn" href="#diagnostico" data-intent="conversa">Falar com a Quitta</a></div>
+    <div class="nav-right"><a href="/en/" class="nav-lang" aria-label="Switch language">EN</a><a class="nav-entrar" href="https://app.quitta.ai/login">Entrar</a><a class="q-btn" href="#diagnostico">Falar com a Quitta</a></div>
   </div>
 </nav>
 
@@ -126,7 +126,7 @@
         assume a régua com dado e consequência, contrato a contrato, e trabalha a <strong>janela de rematrícula</strong>
         com meses de antecedência. Só ganhamos acima do piso congelado em contrato — ou compramos a carteira.</p>
       <div class="hero-ctas">
-        <a class="q-btn q-btn--lime" href="#diagnostico" data-intent="conversa">Conversar sobre minha carteira</a>
+        <a class="q-btn q-btn--lime" href="#diagnostico">Conversar sobre minha carteira</a>
         <a class="hero-demo-link" href="/diagnostico/">Ver um diagnóstico de exemplo <span aria-hidden="true">→</span></a>
         <span class="hero-note">Diagnóstico sem custo</span>
       </div>
@@ -295,15 +295,6 @@
         <input type="hidden" name="origem" value="setor">
         <input type="hidden" name="pagina" value="educacao">
         <input type="hidden" name="tipo" value="diagnostico">
-        <fieldset class="lead-intent">
-          <legend class="q-label">Como prefere começar?</legend>
-          <label><input type="radio" name="intencao" value="conversa" checked> Conversar primeiro</label>
-          <label><input type="radio" name="intencao" value="diagnostico"> Receber um diagnóstico</label>
-        </fieldset>
-        <div class="q-field">
-          <label class="q-label" for="f-nome">Nome</label>
-          <input class="q-input" type="text" id="f-nome" name="nome" autocomplete="name" required>
-        </div>
         <div class="q-field">
           <label class="q-label" for="f-email">E-mail corporativo</label>
           <input class="q-input" type="email" id="f-email" name="email" autocomplete="email" required>
@@ -326,7 +317,7 @@
           <option>Acima de R$ 10 milhões</option>
           </select>
         </div>
-        <button class="q-btn q-btn--lime" type="submit" data-label-conversa="Falar com a Quitta" data-label-diagnostico="Solicitar diagnóstico gratuito">Falar com a Quitta</button>
+        <button class="q-btn q-btn--lime" type="submit">Falar com a Quitta</button>
         <span class="cta-small">SEM CUSTO · SEM EXCLUSIVIDADE NA FASE DE ANÁLISE · NDA PADRÃO</span>
         <p class="lead-note">Você não envia nenhum dado da carteira neste formulário. Se fizer sentido seguir, a base é cedida sob NDA. Veja a <a href="/privacidade/">Política de Privacidade</a>.</p>
         <p class="cta-status" id="form-status" role="status" aria-live="polite"></p>
