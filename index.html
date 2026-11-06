@@ -83,7 +83,7 @@
         <a class="nav-entrar-pill" href="https://app.quitta.ai/login">Entrar</a>
       </div>
     </div>
-    <div class="nav-right"><a href="/en/" class="nav-lang" aria-label="Switch language">EN</a><a class="nav-entrar" href="https://app.quitta.ai/login">Entrar</a><a class="q-btn" href="#analise">Enviar carteira</a></div>
+    <div class="nav-right"><a href="/en/" class="nav-lang" aria-label="Switch language">EN</a><a class="nav-entrar" href="https://app.quitta.ai/login">Entrar</a><a class="q-btn" href="#analise">Falar com a Quitta</a></div>
   </div>
 </nav>
 
@@ -108,8 +108,8 @@
         <strong>Só ganhamos acima do piso congelado em contrato — ou compramos a carteira: estoque e fluxo
         recorrente.</strong></p>
       <div class="hero-ctas">
-        <a class="q-btn q-btn--lime" href="#analise">Solicitar diagnóstico gratuito</a>
-        <a class="hero-demo-link" href="/diagnostico/">Ver diagnóstico demonstrativo <span aria-hidden="true">→</span></a>
+        <a class="q-btn q-btn--lime" href="#analise" data-intent="conversa">Conversar sobre minha carteira</a>
+        <a class="hero-demo-link" href="/diagnostico/">Ver um diagnóstico de exemplo <span aria-hidden="true">→</span></a>
         <span class="hero-note">Diagnóstico sem custo</span>
       </div>
     </div>
@@ -563,6 +563,7 @@
       remuneração da Quitta é definida carteira a carteira depois do diagnóstico e incide apenas
       sobre o que passar desse piso.
     </p>
+    <div class="inline-cta"><a class="q-btn q-btn--lime" href="#analise" data-intent="diagnostico">Ver como ficaria na minha carteira</a></div>
   </div>
 </section>
 
@@ -743,7 +744,7 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="q-eyebrow">Perguntas frequentes</span>
-      <h2>O que os credores perguntam antes de enviar a carteira.</h2>
+      <h2>O que os credores perguntam antes de começar.</h2>
     </div>
     <div class="faq reveal">
       <details>
@@ -797,6 +798,7 @@
           titular</strong>, nas regras do Banco Central.</p></div>
       </details>
     </div>
+    <div class="inline-cta"><p>Ficou alguma dúvida?</p><a class="q-btn q-btn--lime" href="#analise" data-intent="conversa">Fale com a gente</a></div>
   </div>
 </section>
 <script type="application/ld+json">
@@ -896,35 +898,47 @@
   <div class="wrap">
     <div class="cta-card reveal">
       <div>
-        <span class="q-eyebrow q-eyebrow--dark">Comece pelo diagnóstico</span>
+        <span class="q-eyebrow q-eyebrow--dark">Como começar</span>
         <h2>Uma carteira. Cinco dias úteis. Uma resposta com números.</h2>
         <p>Você recebe o baseline da sua operação, a predição título a título e uma recomendação objetiva: Piso Soft, Piso Garantido ou proposta de aquisição — estoque e fluxo. E se o diagnóstico não mostrar espaço acima do seu resultado atual, não há proposta a fazer — dizemos isso com os números na mesa.</p>
       </div>
-      <form class="cta-form" id="lead-form">
+      <form class="cta-form js-contact" id="lead-form">
+        <input type="hidden" name="origem" value="home">
+        <input type="hidden" name="pagina" value="home">
+        <fieldset class="lead-intent">
+          <legend class="q-label">Como prefere começar?</legend>
+          <label><input type="radio" name="tipo" value="conversa" checked> Conversar primeiro</label>
+          <label><input type="radio" name="tipo" value="diagnostico"> Receber um diagnóstico</label>
+        </fieldset>
         <div class="q-field">
-          <label class="q-label" for="f-empresa">Empresa</label>
-          <input class="q-input" type="text" id="f-empresa" name="empresa" required>
+          <label class="q-label" for="f-nome">Nome</label>
+          <input class="q-input" type="text" id="f-nome" name="nome" autocomplete="name" required>
         </div>
         <div class="q-field">
           <label class="q-label" for="f-email">E-mail corporativo</label>
-          <input class="q-input" type="email" id="f-email" name="email" required>
+          <input class="q-input" type="email" id="f-email" name="email" autocomplete="email" required>
         </div>
         <div class="q-field">
-          <label class="q-label" for="f-sistema">Sistema de gestão / cobrança <span class="q-label-opt">(opcional)</span></label>
-          <input class="q-input" type="text" id="f-sistema" name="sistema" placeholder="Ex.: Neofin, Cobmais, Asaas…">
+          <label class="q-label" for="f-empresa">Empresa</label>
+          <input class="q-input" type="text" id="f-empresa" name="empresa" autocomplete="organization" required>
         </div>
         <div class="q-field">
-          <label class="q-label" for="f-volume">Volume da carteira em aberto</label>
-          <select class="q-select" id="f-volume" name="volume" required>
-          <option value="" disabled selected>Selecione a faixa</option>
+          <label class="q-label" for="f-telefone">WhatsApp ou telefone <span class="q-label-opt">(opcional)</span></label>
+          <input class="q-input" type="tel" id="f-telefone" name="telefone" autocomplete="tel">
+        </div>
+        <div class="q-field">
+          <label class="q-label" for="f-volume">Volume da carteira em aberto <span class="q-label-opt">(opcional)</span></label>
+          <select class="q-select" id="f-volume" name="volume">
+          <option value="Não informado" selected>Prefiro informar depois</option>
           <option>Até R$ 500 mil</option>
           <option>R$ 500 mil – R$ 2 milhões</option>
           <option>R$ 2 – 10 milhões</option>
           <option>Acima de R$ 10 milhões</option>
           </select>
         </div>
-        <button class="q-btn q-btn--lime" type="submit">Solicitar diagnóstico gratuito</button>
+        <button class="q-btn q-btn--lime" type="submit" data-label-conversa="Falar com a Quitta" data-label-diagnostico="Solicitar diagnóstico gratuito">Falar com a Quitta</button>
         <span class="cta-small">SEM CUSTO · SEM EXCLUSIVIDADE NA FASE DE ANÁLISE · NDA PADRÃO</span>
+        <p class="lead-note">Você não envia nenhum dado da carteira neste formulário. Se fizer sentido seguir, a base é cedida sob NDA. Veja a <a href="/privacidade/">Política de Privacidade</a>.</p>
         <p class="cta-status" id="form-status" role="status" aria-live="polite"></p>
       </form>
     </div>
@@ -981,48 +995,7 @@
   drops.forEach(d=>d.addEventListener('toggle',()=>{if(d.open)drops.forEach(o=>{if(o!==d)o.open=false;});}));
   document.addEventListener('click',e=>drops.forEach(d=>{if(d.open&&!d.contains(e.target))d.open=false;}));
   document.addEventListener('keydown',e=>{if(e.key==='Escape')drops.forEach(d=>{if(d.open)d.open=false;});});
-  // lead form — os envios vão para o Formspree, que encaminha para angelo@quitta.ai.
-  // Trocar de destinatário se faz na conta do Formspree, não aqui.
-  // Se esta constante voltar a ficar vazia o formulário NÃO confirma o envio: um
-  // "recebido" falso faz o lead sumir sem ninguém perceber, que foi exatamente o que
-  // aconteceu enquanto não havia endpoint.
-  const FORM_ENDPOINT = 'https://app.quitta.ai/api/v1/site/leads';
-  const FALLBACK_EMAIL = 'angelo@quitta.ai';
-  const leadForm = document.getElementById('lead-form');
-  const formStatus = document.getElementById('form-status');
-  const submitBtn = leadForm.querySelector('button[type=submit]');
-  let submitting = false;
-  // aria-disabled, not [disabled]: disabling a focused button drops focus to <body>
-  const say = msg => { submitBtn.textContent = msg; formStatus.textContent = msg; };
-  leadForm.addEventListener('submit', async e => {
-    e.preventDefault();
-    if (submitting) return;
-    if (!FORM_ENDPOINT) {
-      // Sem endpoint não há para onde enviar. Diz isso e entrega o e-mail, em vez de
-      // fingir que deu certo.
-      formStatus.innerHTML = 'Envio automático indisponível — escreva para ' +
-        '<a href="mailto:' + FALLBACK_EMAIL + '?subject=Diagn%C3%B3stico%20de%20carteira">' +
-        FALLBACK_EMAIL + '</a>.';
-      return;
-    }
-    submitting = true;
-    submitBtn.setAttribute('aria-disabled', 'true');
-    say("Enviando…");
-    try {
-      const res = await fetch(FORM_ENDPOINT, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(Object.fromEntries(new FormData(leadForm)))
-      });
-      if (!res.ok) throw new Error(res.status);
-    } catch (err) {
-      submitting = false;
-      submitBtn.removeAttribute('aria-disabled');
-      say("Não foi possível enviar — tente novamente");
-      return;
-    }
-    say("Recebido — retornamos em até 5 dias úteis ✓");
-  });
 </script>
+<script src="/lead-form.js" defer></script>
 </body>
 </html>
