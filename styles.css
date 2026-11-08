@@ -716,3 +716,7 @@ body.page-404 .foot-in{gap:14px}
     text-decoration-thickness:.09em}
   .hero h1 .risco::after{content:none}
 }
+/* hero de página interna sem painel (hub de setores, sobre, contato) */
+.hero--plain h1{max-width:18em}
+.hero--plain .quick-answer{margin-top:4px}
+.read-card .read-desc{color:var(--text-muted);font-size:var(--text-body-md);margin:0}
