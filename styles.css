@@ -691,3 +691,40 @@ body.page-404 .foot-in{gap:14px}
 .cta-copy-chips{display:flex;flex-direction:column;gap:18px;margin-top:28px;position:relative;z-index:1}
 .inline-cta{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:36px}
 .inline-cta p{margin:0}
+
+/* ---------- resposta rápida (bloco GEO) em setores e home ---------- */
+.quick-answer{background:var(--surface-card);border:1px solid var(--hair);border-left:3px solid var(--cedula);
+  border-radius:var(--radius-card);padding:18px 22px;margin:0 0 22px;max-width:46em}
+.quick-answer .k{font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--ls-tag);
+  text-transform:uppercase;color:var(--cedula);font-weight:700}
+.quick-answer p{margin:8px 0 0;font-size:var(--text-body-md);line-height:var(--lh-relaxed);color:var(--text-body)}
+.faq summary h3{font:inherit;color:inherit;margin:0;letter-spacing:inherit}
+/* ---------- leituras do Academy nas páginas de setor ---------- */
+.reads-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--gap-grid);margin-top:28px}
+.read-card{display:flex;flex-direction:column;gap:10px;background:var(--surface-card);border:1px solid var(--hair);
+  border-radius:var(--radius-card);padding:22px 22px 20px;color:inherit;text-decoration:none}
+.read-card:hover{box-shadow:var(--shadow-panel)}
+.read-card .trilha{font-family:var(--font-mono);font-size:var(--text-mono-label);letter-spacing:var(--ls-tag);
+  text-transform:uppercase;color:var(--cedula);font-weight:700}
+.read-card h3{font-family:var(--font-display);font-weight:400;font-size:20px;line-height:1.3;margin:0}
+.read-card .go{font-weight:600;font-size:var(--text-body-md);color:var(--cedula);margin-top:auto}
+/* hero no celular: o trecho riscado do H1 precisa quebrar linha, senão alarga a coluna
+   além da tela e o .hero (overflow:hidden) corta o texto à direita */
+.hero-grid>*{min-width:0}
+@media(max-width:560px){
+  .hero h1 .risco{white-space:normal;text-decoration:line-through;text-decoration-color:var(--quitado);
+    text-decoration-thickness:.09em}
+  .hero h1 .risco::after{content:none}
+}
+/* hero de página interna sem painel (hub de setores, sobre, contato) */
+.hero--plain h1{max-width:18em}
+.hero--plain .quick-answer{margin-top:4px}
+.read-card .read-desc{color:var(--text-muted);font-size:var(--text-body-md);margin:0}
+
+/* ---------- links do rodapé ---------- */
+.foot-links{flex-basis:100%;display:flex;flex-wrap:wrap;gap:10px 22px;font-family:var(--font-mono);
+  font-size:var(--text-mono-label);letter-spacing:.08em;text-transform:uppercase}
+.foot-links a{color:var(--text-muted);text-decoration:none}
+.foot-links a:hover,.foot-links a:focus-visible{color:var(--cedula);text-decoration:underline}
+.foot-links--center{justify-content:center;margin-top:14px}
+.foot-links--center a{color:inherit}

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Cobrança de banco para distribuidoras de alimentos e food service: régua que não passa pelo vendedor, protesto no ponto certo e predição duplicata a duplicata. Remuneração só acima do piso congelado.">
+<meta name="description" content="Cobrança para distribuidoras de alimentos e food service: régua fora do vendedor, protesto no ponto certo e remuneração só acima do piso.">
 <meta name="theme-color" content="#0B1F16">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/icon-180.png">
@@ -11,17 +11,17 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Quitta">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:title" content="Quitta — Cobrança para distribuidoras de alimentos e food service">
-<meta property="og:description" content="Régua que não passa pelo vendedor, protesto no ponto certo e predição duplicata a duplicata. Remuneração só acima do piso congelado.">
+<meta property="og:title" content="Cobrança para distribuidoras de alimentos e food service | Quitta">
+<meta property="og:description" content="Cobrança para distribuidoras de alimentos e food service: régua fora do vendedor, protesto no ponto certo e remuneração só acima do piso.">
 <meta property="og:url" content="https://quitta.ai/setores/distribuidoras/">
 <meta property="og:image" content="https://quitta.ai/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Quitta — Cobrança para distribuidoras de alimentos e food service">
-<meta name="twitter:description" content="Régua que não passa pelo vendedor, protesto no ponto certo e predição duplicata a duplicata.">
+<meta name="twitter:title" content="Cobrança para distribuidoras de alimentos e food service | Quitta">
+<meta name="twitter:description" content="Cobrança para distribuidoras de alimentos e food service: régua fora do vendedor, protesto no ponto certo e remuneração só acima do piso.">
 <meta name="twitter:image" content="https://quitta.ai/og.png">
-<title>Quitta — Cobrança para distribuidoras de alimentos e food service</title>
+<title>Cobrança para distribuidoras de alimentos e food service | Quitta</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Outfit:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -45,17 +45,86 @@
       "@id": "https://quitta.ai/#site",
       "url": "https://quitta.ai/",
       "name": "Quitta",
-      "publisher": { "@id": "https://quitta.ai/#org" },
+      "publisher": {
+        "@id": "https://quitta.ai/#org"
+      },
       "inLanguage": "pt-BR"
     },
     {
       "@type": "WebPage",
       "@id": "https://quitta.ai/setores/distribuidoras/",
       "url": "https://quitta.ai/setores/distribuidoras/",
-      "name": "Quitta — Cobrança para distribuidoras de alimentos e food service",
-      "description": "Cobrança de banco para distribuidoras de alimentos e food service: régua fora do vendedor, protesto no ponto certo e predição duplicata a duplicata.",
-      "isPartOf": { "@id": "https://quitta.ai/#site" },
+      "name": "Cobrança para distribuidoras de alimentos e food service | Quitta",
+      "description": "Cobrança para distribuidoras de alimentos e food service: régua fora do vendedor, protesto no ponto certo e remuneração só acima do piso.",
+      "isPartOf": {
+        "@id": "https://quitta.ai/#site"
+      },
       "inLanguage": "pt-BR"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://quitta.ai/setores/distribuidoras/#servico",
+      "name": "Cobrança para distribuidoras de alimentos e food service",
+      "serviceType": "Recuperação de crédito",
+      "description": "A Quitta cobra duplicatas em atraso de distribuidoras de alimentos e food service com uma régua que não passa pelo vendedor, protesto no ponto certo e predição duplicata a duplicata. A remuneração incide só sobre o que exceder um piso de performance congelado em contrato, ou a Quitta faz proposta de compra da carteira.",
+      "provider": {
+        "@id": "https://quitta.ai/#org"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Brasil"
+      },
+      "audience": {
+        "@type": "BusinessAudience",
+        "name": "Distribuidoras de alimentos e food service"
+      },
+      "url": "https://quitta.ai/setores/distribuidoras/"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Duplicata em atraso pode ser protestada?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pode. Duplicatas estão entre os títulos protestáveis (Lei 9.492/1997, art. 1º), e o cartório lavra o protesto em até 3 dias úteis da protocolização, depois de intimar o devedor (Lei 9.492/1997, art. 12)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual o prazo para executar uma duplicata?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Três anos a partir do vencimento (Lei 5.474/1968, art. 18). Depois disso, a cobrança judicial segue por outras vias, com mais custo e prazo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Por que tirar a cobrança das mãos do vendedor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Porque o cliente que não pagou é o mesmo que faz o próximo pedido: quando a cobrança depende do vendedor, ela concorre com a venda. Uma régua separada mantém a consequência sem queimar a relação comercial."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "A cobrança expõe o cliente devedor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. A Quitta fala só com o devedor ou seu representante, em dias úteis e horário comercial, e anuncia apenas as medidas que serão de fato cumpridas: o padrão defensável em B2B e o que preserva a relação comercial."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como a Quitta é remunerada?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Só sobre o que exceder um piso mínimo de performance, auditado a partir da recuperação atual e congelado em contrato. Abaixo do piso, a Quitta não recebe nada. A alternativa é uma proposta de compra da carteira."
+          }
+        }
+      ],
+      "@id": "https://quitta.ai/setores/distribuidoras/#perguntas"
     }
   ]
 }
@@ -92,11 +161,12 @@
           <div class="nav-drop-panel">
             <a href="/setores/operadoras/">Operadoras</a>
             <a href="/setores/autogestao/">Autogestão</a>
-            <a href="/unimed/">Unimeds</a>
+            <a href="/setores/unimeds/">Unimeds</a>
             <a href="/setores/educacao/">Educação</a>
             <a href="/setores/condominios/">Condomínios</a>
             <a href="/setores/distribuidoras/">Distribuidoras</a>
             <a href="/setores/locacao/">Locação</a>
+            <a href="/setores/">Todos os setores</a>
           </div>
         </details>
         <details class="nav-drop">
@@ -121,6 +191,10 @@
     <div>
       <span class="q-eyebrow">Cobrança de banco para distribuidoras de alimentos e food service</span>
       <h1>O cliente que não pagou é o mesmo que <span class="risco">faz pedido na terça</span>.</h1>
+      <div class="quick-answer">
+        <span class="k">Resposta rápida</span>
+        <p>A Quitta cobra duplicatas em atraso de distribuidoras de alimentos e food service com uma régua que não passa pelo vendedor, protesto no ponto certo e predição duplicata a duplicata. A remuneração incide só sobre o que exceder um piso de performance congelado em contrato, ou a Quitta faz proposta de compra da carteira.</p>
+      </div>
       <p class="sub">É esse o nó do setor: cobrar firme parece arriscar a conta, o vendedor não quer perder a
         comissão e o protesto fica para depois — até virar prejuízo. A Quitta assume a régua para que a cobrança
         <strong>não passe pelo seu vendedor</strong>: a rota continua, a consequência acontece, duplicata a
@@ -279,6 +353,70 @@
   </div>
 </section>
 
+<!-- ============ PERGUNTAS ============ -->
+<section id="perguntas">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="q-eyebrow">Perguntas frequentes</span>
+      <h2>O que perguntam sobre cobrança para distribuidoras de alimentos e food service.</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary><h3>Duplicata em atraso pode ser protestada?</h3></summary>
+        <div class="a"><p>Pode. Duplicatas estão entre os títulos protestáveis (Lei 9.492/1997, art. 1º), e o cartório lavra o protesto em até 3 dias úteis da protocolização, depois de intimar o devedor (Lei 9.492/1997, art. 12).</p></div>
+      </details>
+      <details>
+        <summary><h3>Qual o prazo para executar uma duplicata?</h3></summary>
+        <div class="a"><p>Três anos a partir do vencimento (Lei 5.474/1968, art. 18). Depois disso, a cobrança judicial segue por outras vias, com mais custo e prazo.</p></div>
+      </details>
+      <details>
+        <summary><h3>Por que tirar a cobrança das mãos do vendedor?</h3></summary>
+        <div class="a"><p>Porque o cliente que não pagou é o mesmo que faz o próximo pedido: quando a cobrança depende do vendedor, ela concorre com a venda. Uma régua separada mantém a consequência sem queimar a relação comercial.</p></div>
+      </details>
+      <details>
+        <summary><h3>A cobrança expõe o cliente devedor?</h3></summary>
+        <div class="a"><p>Não. A Quitta fala só com o devedor ou seu representante, em dias úteis e horário comercial, e anuncia apenas as medidas que serão de fato cumpridas: o padrão defensável em B2B e o que preserva a relação comercial.</p></div>
+      </details>
+      <details>
+        <summary><h3>Como a Quitta é remunerada?</h3></summary>
+        <div class="a"><p>Só sobre o que exceder um piso mínimo de performance, auditado a partir da recuperação atual e congelado em contrato. Abaixo do piso, a Quitta não recebe nada. A alternativa é uma proposta de compra da carteira.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ACADEMY ============ -->
+<section id="aprofundar">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="q-eyebrow">Quitta AI Academy</span>
+      <h2>Para aprofundar antes da conversa.</h2>
+    </div>
+    <div class="reads-grid">
+      <a class="read-card" href="/academy/inadimplencia-em-distribuidoras/">
+        <span class="trilha">Setor</span>
+        <h3>Inadimplência em distribuidoras: cobrar sem travar a venda</h3>
+        <span class="go">Ler no Academy →</span>
+      </a>
+      <a class="read-card" href="/academy/cobranca-industria-e-atacado/">
+        <span class="trilha">Setor</span>
+        <h3>Indústria e atacado: cobrança de duplicatas</h3>
+        <span class="go">Ler no Academy →</span>
+      </a>
+      <a class="read-card" href="/academy/analise-de-credito-b2b/">
+        <span class="trilha">Prevenção</span>
+        <h3>Análise de crédito B2B: vender a prazo sem financiar calote</h3>
+        <span class="go">Ler no Academy →</span>
+      </a>
+      <a class="read-card" href="/academy/protesto-ou-negativacao/">
+        <span class="trilha">Escalada</span>
+        <h3>Protesto ou negativação: qual usar e quando</h3>
+        <span class="go">Ler no Academy →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ============ CTA ============ -->
 <section id="diagnostico">
   <div class="wrap">
@@ -339,6 +477,7 @@
     </a>
     <span class="foot-tag">contas acertadas.</span>
     <span class="foot-mono">QUITTA.AI · RECUPERAÇÃO DE CRÉDITO OPERADA POR DADOS · © MMXXVI</span>
+    <nav class="foot-links" aria-label="Links do rodapé"><a href="/setores/">Setores</a><a href="/academy/">Academy</a><a href="/sobre/">Sobre</a><a href="/contato/">Contato</a><a href="/privacidade/">Privacidade</a><a href="/termos/">Termos</a></nav>
   </div>
 </footer>
 
@@ -383,5 +522,6 @@
 })();
 </script>
 <script src="/lead-form.js" defer></script>
+<script src="/track.js" defer></script>
 </body>
 </html>

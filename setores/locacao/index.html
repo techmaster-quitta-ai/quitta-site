@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Cobrança para locadoras de máquinas, equipamentos e frota: contrato como título executivo, notificação de mora que aciona o aluguel-pena e reintegração decidida dentro da janela de ano e dia.">
+<meta name="description" content="Cobrança para locadoras de máquinas, equipamentos e frota: contrato executável, notificação de mora e remuneração só acima do piso.">
 <meta name="theme-color" content="#0B1F16">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/icon-180.png">
@@ -11,17 +11,17 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Quitta">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:title" content="Quitta — Cobrança para locadoras de máquinas, equipamentos e frota">
-<meta property="og:description" content="Contrato como título executivo, notificação de mora que aciona o aluguel-pena e reintegração decidida dentro da janela de ano e dia.">
+<meta property="og:title" content="Cobrança para locadoras de máquinas, equipamentos e frota | Quitta">
+<meta property="og:description" content="Cobrança para locadoras de máquinas, equipamentos e frota: contrato executável, notificação de mora e remuneração só acima do piso.">
 <meta property="og:url" content="https://quitta.ai/setores/locacao/">
 <meta property="og:image" content="https://quitta.ai/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Quitta — Cobrança para locadoras de máquinas, equipamentos e frota">
-<meta name="twitter:description" content="Contrato como título executivo, aluguel-pena a partir da mora e reintegração decidida dentro da janela de ano e dia.">
+<meta name="twitter:title" content="Cobrança para locadoras de máquinas, equipamentos e frota | Quitta">
+<meta name="twitter:description" content="Cobrança para locadoras de máquinas, equipamentos e frota: contrato executável, notificação de mora e remuneração só acima do piso.">
 <meta name="twitter:image" content="https://quitta.ai/og.png">
-<title>Quitta — Cobrança para locadoras de máquinas, equipamentos e frota</title>
+<title>Cobrança para locadoras de máquinas, equipamentos e frota | Quitta</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Outfit:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -45,17 +45,86 @@
       "@id": "https://quitta.ai/#site",
       "url": "https://quitta.ai/",
       "name": "Quitta",
-      "publisher": { "@id": "https://quitta.ai/#org" },
+      "publisher": {
+        "@id": "https://quitta.ai/#org"
+      },
       "inLanguage": "pt-BR"
     },
     {
       "@type": "WebPage",
       "@id": "https://quitta.ai/setores/locacao/",
       "url": "https://quitta.ai/setores/locacao/",
-      "name": "Quitta — Cobrança para locadoras de máquinas, equipamentos e frota",
-      "description": "Cobrança para locadoras: contrato como título executivo, notificação de mora que aciona o aluguel-pena e reintegração decidida dentro da janela de ano e dia.",
-      "isPartOf": { "@id": "https://quitta.ai/#site" },
+      "name": "Cobrança para locadoras de máquinas, equipamentos e frota | Quitta",
+      "description": "Cobrança para locadoras de máquinas, equipamentos e frota: contrato executável, notificação de mora e remuneração só acima do piso.",
+      "isPartOf": {
+        "@id": "https://quitta.ai/#site"
+      },
       "inLanguage": "pt-BR"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://quitta.ai/setores/locacao/#servico",
+      "name": "Cobrança para locadoras de máquinas, equipamentos e frota",
+      "serviceType": "Recuperação de crédito",
+      "description": "A Quitta cobra contratos em atraso de locadoras de máquinas, equipamentos e frota: notificação de mora, negociação guiada por score, execução do contrato quando ele é título executivo e a decisão de retomar o bem tomada com dado. A remuneração incide só sobre o que exceder um piso congelado em contrato.",
+      "provider": {
+        "@id": "https://quitta.ai/#org"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Brasil"
+      },
+      "audience": {
+        "@type": "BusinessAudience",
+        "name": "Locadoras de máquinas, equipamentos e frota"
+      },
+      "url": "https://quitta.ai/setores/locacao/"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quando o contrato de locação é título executivo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Quando é documento particular assinado pelo devedor e por duas testemunhas (CPC, art. 784, III). Com assinatura eletrônica cuja integridade o provedor consiga conferir, as testemunhas são dispensadas (CPC, art. 784, §4º)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que acontece na execução do contrato?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O devedor é citado para pagar em 3 dias; não pagando, expede-se mandado de penhora e avaliação (CPC, art. 829)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Sem título executivo, ainda dá para cobrar na Justiça?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dá. Prova escrita sem força executiva, como e-mails, notas fiscais e comprovantes de entrega, permite ação monitória (CPC, art. 700); sem prova escrita, cabe ação de cobrança comum."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Preciso notificar o cliente para constituí-lo em mora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende do contrato. Se a obrigação tem data certa de vencimento, o próprio vencimento constitui o devedor em mora, sem notificação; sem data certa, a mora depende de interpelação."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como a Quitta é remunerada?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Só sobre o que exceder um piso mínimo de performance, auditado a partir da recuperação atual e congelado em contrato. Abaixo do piso, a Quitta não recebe nada. A alternativa é uma proposta de compra da carteira."
+          }
+        }
+      ],
+      "@id": "https://quitta.ai/setores/locacao/#perguntas"
     }
   ]
 }
@@ -92,11 +161,12 @@
           <div class="nav-drop-panel">
             <a href="/setores/operadoras/">Operadoras</a>
             <a href="/setores/autogestao/">Autogestão</a>
-            <a href="/unimed/">Unimeds</a>
+            <a href="/setores/unimeds/">Unimeds</a>
             <a href="/setores/educacao/">Educação</a>
             <a href="/setores/condominios/">Condomínios</a>
             <a href="/setores/distribuidoras/">Distribuidoras</a>
             <a href="/setores/locacao/">Locação</a>
+            <a href="/setores/">Todos os setores</a>
           </div>
         </details>
         <details class="nav-drop">
@@ -121,6 +191,10 @@
     <div>
       <span class="q-eyebrow">Cobrança de banco para locadoras de máquinas, equipamentos e frota</span>
       <h1>A máquina continua rendendo. Na obra <span class="risco">de quem parou de pagar</span>.</h1>
+      <div class="quick-answer">
+        <span class="k">Resposta rápida</span>
+        <p>A Quitta cobra contratos em atraso de locadoras de máquinas, equipamentos e frota: notificação de mora, negociação guiada por score, execução do contrato quando ele é título executivo e a decisão de retomar o bem tomada com dado. A remuneração incide só sobre o que exceder um piso congelado em contrato.</p>
+      </div>
       <p class="sub">O locador é o único credor que financia o inadimplente com o próprio ativo — e a alavanca que
         resolveria isso é justamente a que ele evita puxar, porque retomar o equipamento mata o cliente da próxima
         obra. Então espera. E enquanto espera, <strong>o relógio da lei corre</strong>. A Quitta assume a régua para
@@ -289,6 +363,70 @@
   </div>
 </section>
 
+<!-- ============ PERGUNTAS ============ -->
+<section id="perguntas">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="q-eyebrow">Perguntas frequentes</span>
+      <h2>O que perguntam sobre cobrança para locadoras de máquinas, equipamentos e frota.</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary><h3>Quando o contrato de locação é título executivo?</h3></summary>
+        <div class="a"><p>Quando é documento particular assinado pelo devedor e por duas testemunhas (CPC, art. 784, III). Com assinatura eletrônica cuja integridade o provedor consiga conferir, as testemunhas são dispensadas (CPC, art. 784, §4º).</p></div>
+      </details>
+      <details>
+        <summary><h3>O que acontece na execução do contrato?</h3></summary>
+        <div class="a"><p>O devedor é citado para pagar em 3 dias; não pagando, expede-se mandado de penhora e avaliação (CPC, art. 829).</p></div>
+      </details>
+      <details>
+        <summary><h3>Sem título executivo, ainda dá para cobrar na Justiça?</h3></summary>
+        <div class="a"><p>Dá. Prova escrita sem força executiva, como e-mails, notas fiscais e comprovantes de entrega, permite ação monitória (CPC, art. 700); sem prova escrita, cabe ação de cobrança comum.</p></div>
+      </details>
+      <details>
+        <summary><h3>Preciso notificar o cliente para constituí-lo em mora?</h3></summary>
+        <div class="a"><p>Depende do contrato. Se a obrigação tem data certa de vencimento, o próprio vencimento constitui o devedor em mora, sem notificação; sem data certa, a mora depende de interpelação.</p></div>
+      </details>
+      <details>
+        <summary><h3>Como a Quitta é remunerada?</h3></summary>
+        <div class="a"><p>Só sobre o que exceder um piso mínimo de performance, auditado a partir da recuperação atual e congelado em contrato. Abaixo do piso, a Quitta não recebe nada. A alternativa é uma proposta de compra da carteira.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ACADEMY ============ -->
+<section id="aprofundar">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="q-eyebrow">Quitta AI Academy</span>
+      <h2>Para aprofundar antes da conversa.</h2>
+    </div>
+    <div class="reads-grid">
+      <a class="read-card" href="/academy/provas-da-divida/">
+        <span class="trilha">Jurídico</span>
+        <h3>Como documentar a dívida: as provas que sustentam a ação</h3>
+        <span class="go">Ler no Academy →</span>
+      </a>
+      <a class="read-card" href="/academy/garantias-para-vender-a-prazo/">
+        <span class="trilha">Prevenção</span>
+        <h3>Aval, fiança e garantias: como blindar vendas a prazo</h3>
+        <span class="go">Ler no Academy →</span>
+      </a>
+      <a class="read-card" href="/academy/cobranca-judicial-quando-vale/">
+        <span class="trilha">Escalada</span>
+        <h3>Cobrança judicial: quando vale a pena?</h3>
+        <span class="go">Ler no Academy →</span>
+      </a>
+      <a class="read-card" href="/academy/como-localizar-devedor/">
+        <span class="trilha">Operação</span>
+        <h3>Devedor sumido: como localizar</h3>
+        <span class="go">Ler no Academy →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ============ CTA ============ -->
 <section id="diagnostico">
   <div class="wrap">
@@ -350,6 +488,7 @@
     </a>
     <span class="foot-tag">contas acertadas.</span>
     <span class="foot-mono">QUITTA.AI · RECUPERAÇÃO DE CRÉDITO OPERADA POR DADOS · © MMXXVI</span>
+    <nav class="foot-links" aria-label="Links do rodapé"><a href="/setores/">Setores</a><a href="/academy/">Academy</a><a href="/sobre/">Sobre</a><a href="/contato/">Contato</a><a href="/privacidade/">Privacidade</a><a href="/termos/">Termos</a></nav>
   </div>
 </footer>
 
@@ -394,5 +533,6 @@
 })();
 </script>
 <script src="/lead-form.js" defer></script>
+<script src="/track.js" defer></script>
 </body>
 </html>
