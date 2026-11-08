@@ -37,6 +37,12 @@ document.querySelectorAll('form.js-lead').forEach(form => {
       return;
     }
     const tipo = (form.querySelector('[name=tipo]') || {}).value;
+    // lead_submit em window.dataLayer só depois do envio confirmado; sem dado pessoal.
+    (window.dataLayer = window.dataLayer || []).push({
+      event: 'lead_submit', form_origem: (form.querySelector('[name=origem]') || {}).value || '',
+      form_pagina: (form.querySelector('[name=pagina]') || {}).value || '', form_tipo: tipo || '',
+      page_path: location.pathname
+    });
     say(tipo === 'diagnostico' ? 'Recebido — retornamos em até 5 dias úteis ✓'
       : tipo === 'material' ? 'Recebido — o material chega em até 1 dia útil ✓'
       : 'Inscrição recebida ✓');

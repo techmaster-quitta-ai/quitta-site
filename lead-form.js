@@ -20,6 +20,15 @@
     done: 'Recebido — vamos entrar em contato ✓'
   };
 
+  // lead_submit em window.dataLayer só depois do envio confirmado; sem dado pessoal.
+  function pushLead(form) {
+    var get = function (n) { var el = form.querySelector('[name=' + n + ']'); return el ? el.value : ''; };
+    (window.dataLayer = window.dataLayer || []).push({
+      event: 'lead_submit', form_origem: get('origem') || get('source'), form_pagina: get('pagina') || get('page'),
+      form_tipo: get('tipo'), page_path: location.pathname
+    });
+  }
+
   document.querySelectorAll('form.js-contact').forEach(function (form) {
     var btn = form.querySelector('button[type=submit]');
     var status = form.querySelector('.cta-status');
@@ -39,6 +48,7 @@
         body: JSON.stringify(Object.fromEntries(new FormData(form)))
       }).then(function (res) {
         if (!res.ok) throw new Error(res.status);
+        pushLead(form);
         btn.textContent = text.done;
         status.textContent = text.done;
       }).catch(function () {
