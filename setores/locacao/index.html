@@ -109,7 +109,7 @@
         <a class="nav-entrar-pill" href="https://app.quitta.ai/login">Entrar</a>
       </div>
     </div>
-    <div class="nav-right"><a href="/en/" class="nav-lang" aria-label="Switch language">EN</a><a class="nav-entrar" href="https://app.quitta.ai/login">Entrar</a><a class="q-btn" href="/#analise">Enviar carteira</a></div>
+    <div class="nav-right"><a href="/en/" class="nav-lang" aria-label="Switch language">EN</a><a class="nav-entrar" href="https://app.quitta.ai/login">Entrar</a><a class="q-btn" href="#diagnostico">Falar com a Quitta</a></div>
   </div>
 </nav>
 
@@ -127,8 +127,8 @@
         que a decisão saia do modelo, não do desconforto: só ganhamos acima do piso congelado em contrato — ou
         compramos a carteira.</p>
       <div class="hero-ctas">
-        <a class="q-btn q-btn--lime" href="/#analise">Solicitar diagnóstico gratuito</a>
-        <a class="hero-demo-link" href="/diagnostico/">Ver diagnóstico demonstrativo <span aria-hidden="true">→</span></a>
+        <a class="q-btn q-btn--lime" href="#diagnostico">Conversar sobre minha carteira</a>
+        <a class="hero-demo-link" href="/diagnostico/">Ver um diagnóstico de exemplo <span aria-hidden="true">→</span></a>
         <span class="hero-note">Diagnóstico sem custo</span>
       </div>
     </div>
@@ -294,19 +294,48 @@
   <div class="wrap">
     <div class="cta-card reveal">
       <div>
-        <span class="q-eyebrow q-eyebrow--dark">Comece pelo diagnóstico</span>
+        <span class="q-eyebrow q-eyebrow--dark">Como começar</span>
         <h2>Sua carteira de locações. Cinco dias úteis. Uma resposta com números.</h2>
         <p>Envie o histórico e um contrato-padrão. Devolvemos o baseline da locadora, a predição contrato a
           contrato, a janela possessória de cada caso e a triagem que interessa: quanto da sua carteira é
           executável hoje e quanto cairia no rito comum. Se não houver espaço acima do seu resultado atual,
           dizemos isso com os números na mesa.</p>
+        <div class="cta-copy-chips">
+          <div class="q-chip"><div class="k">Compromisso 01</div><div class="v">Diagnóstico sem custo, com baseline congelado da operação atual</div></div>
+          <div class="q-chip"><div class="k">Compromisso 02</div><div class="v">Quem cobra não é quem aluga — seu comercial não entra na régua</div></div>
+        </div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:26px;justify-content:center">
-        <div class="q-chip"><div class="k">Compromisso 01</div><div class="v">Diagnóstico sem custo, com baseline congelado da operação atual</div></div>
-        <div class="q-chip"><div class="k">Compromisso 02</div><div class="v">Quem cobra não é quem aluga — seu comercial não entra na régua</div></div>
-        <a class="q-btn q-btn--lime" href="/#analise" style="align-self:flex-start">Solicitar diagnóstico gratuito</a>
+      <form class="cta-form js-contact" id="lead-form">
+        <input type="hidden" name="origem" value="setor">
+        <input type="hidden" name="pagina" value="locacao">
+        <input type="hidden" name="tipo" value="diagnostico">
+        <div class="q-field">
+          <label class="q-label" for="f-email">E-mail corporativo</label>
+          <input class="q-input" type="email" id="f-email" name="email" autocomplete="email" required>
+        </div>
+        <div class="q-field">
+          <label class="q-label" for="f-empresa">Empresa</label>
+          <input class="q-input" type="text" id="f-empresa" name="empresa" autocomplete="organization" required>
+        </div>
+        <div class="q-field">
+          <label class="q-label" for="f-telefone">WhatsApp ou telefone <span class="q-label-opt">(opcional)</span></label>
+          <input class="q-input" type="tel" id="f-telefone" name="telefone" autocomplete="tel">
+        </div>
+        <div class="q-field">
+          <label class="q-label" for="f-volume">Volume da carteira em aberto <span class="q-label-opt">(opcional)</span></label>
+          <select class="q-select" id="f-volume" name="volume">
+          <option value="Não informado" selected>Prefiro informar depois</option>
+          <option>Até R$ 500 mil</option>
+          <option>R$ 500 mil – R$ 2 milhões</option>
+          <option>R$ 2 – 10 milhões</option>
+          <option>Acima de R$ 10 milhões</option>
+          </select>
+        </div>
+        <button class="q-btn q-btn--lime" type="submit">Falar com a Quitta</button>
         <span class="cta-small">SEM CUSTO · SEM EXCLUSIVIDADE NA FASE DE ANÁLISE · NDA PADRÃO</span>
-      </div>
+        <p class="lead-note">Você não envia nenhum dado da carteira neste formulário. Se fizer sentido seguir, a base é cedida sob NDA. Veja a <a href="/privacidade/">Política de Privacidade</a>.</p>
+        <p class="cta-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
     </div>
   </div>
 </section>
@@ -364,5 +393,6 @@
   document.addEventListener('keydown',function(e){if(e.key==='Escape')drops.forEach(function(d){if(d.open)d.open=false;});});
 })();
 </script>
+<script src="/lead-form.js" defer></script>
 </body>
 </html>
