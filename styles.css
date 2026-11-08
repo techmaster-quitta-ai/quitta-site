@@ -720,3 +720,11 @@ body.page-404 .foot-in{gap:14px}
 .hero--plain h1{max-width:18em}
 .hero--plain .quick-answer{margin-top:4px}
 .read-card .read-desc{color:var(--text-muted);font-size:var(--text-body-md);margin:0}
+
+/* ---------- links do rodapé ---------- */
+.foot-links{flex-basis:100%;display:flex;flex-wrap:wrap;gap:10px 22px;font-family:var(--font-mono);
+  font-size:var(--text-mono-label);letter-spacing:.08em;text-transform:uppercase}
+.foot-links a{color:var(--text-muted);text-decoration:none}
+.foot-links a:hover,.foot-links a:focus-visible{color:var(--cedula);text-decoration:underline}
+.foot-links--center{justify-content:center;margin-top:14px}
+.foot-links--center a{color:inherit}
