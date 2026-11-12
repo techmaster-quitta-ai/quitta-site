@@ -34,11 +34,14 @@ document.querySelectorAll('form.js-lead').forEach(form => {
     busy = true;
     btn.setAttribute('aria-disabled', 'true');
     say('Enviando…');
+    // origem do visitante (track.js); a API só guarda o que estiver no modelo dela
+    let src = {};
+    try { src = window.quittaOrigem ? window.quittaOrigem() : {}; } catch (err) {}
     try {
       const res = await fetch(FORM_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(leadPayload(form))
+        body: JSON.stringify(Object.assign({}, src, leadPayload(form)))
       });
       if (!res.ok) throw new Error(res.status);
     } catch (err) {
@@ -53,7 +56,8 @@ document.querySelectorAll('form.js-lead').forEach(form => {
     (window.dataLayer = window.dataLayer || []).push({
       event: 'lead_submit', form_origem: (form.querySelector('[name=origem]') || {}).value || '',
       form_pagina: (form.querySelector('[name=pagina]') || {}).value || '', form_tipo: tipo || '',
-      page_path: location.pathname
+      page_path: location.pathname, lead_canal: src.canal || '', lead_utm_source: src.utm_source || '',
+      lead_utm_medium: src.utm_medium || '', lead_utm_campaign: src.utm_campaign || ''
     });
     say(tipo === 'diagnostico' ? 'Recebido — retornamos em até 5 dias úteis ✓'
       : tipo === 'material' ? 'Recebido — o material chega em até 1 dia útil ✓'
