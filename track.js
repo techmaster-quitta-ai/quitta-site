@@ -1,6 +1,5 @@
 // Eventos de medição do site em window.dataLayer.
-// Este arquivo NÃO carrega nenhuma tag (GTM, GA4, pixel). Só registra eventos na fila
-// dataLayer; quando uma ferramenta de analytics for escolhida, ela lê esta fila.
+// A única tag de terceiro carregada é a do Google Ads (último bloco deste arquivo).
 // Nunca enviar e-mail, telefone ou outro dado pessoal nos eventos.
 (function () {
   var dl = window.dataLayer = window.dataLayer || [];
@@ -107,5 +106,32 @@
     out.primeiro_canal = first.canal;
     out.primeira_entrada = first.entrada;
     return out;
+  };
+})();
+
+// Google Ads: tag da conta Quitta.ai e conversão "Lead do site — diagnóstico".
+// A tag só carrega em quitta.ai; fora dele (localhost, preview) gtag() apenas enfileira
+// em dataLayer, para dar para testar sem mandar dado ao Google.
+// A conversão dispara via window.quittaConversao(tipo), chamada pelos formulários
+// (lead-form.js, academy/academy.js) só depois do envio confirmado pela API, e só
+// para tipo "diagnostico". Nenhum dado pessoal vai junto.
+(function () {
+  var AW_ID = 'AW-18571565087';
+  var SEND_TO = AW_ID + '/G-BUCN7wm7cdEJ-wzpdF';
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+  gtag('js', new Date());
+  gtag('config', AW_ID);
+
+  if (/(^|\.)quitta\.ai$/.test(location.hostname)) {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + AW_ID;
+    document.head.appendChild(s);
+  }
+
+  window.quittaConversao = function (tipo) {
+    if (tipo !== 'diagnostico') return;
+    gtag('event', 'conversion', { send_to: SEND_TO });
   };
 })();
