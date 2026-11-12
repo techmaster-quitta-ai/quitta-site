@@ -728,3 +728,12 @@ body.page-404 .foot-in{gap:14px}
 .foot-links a:hover,.foot-links a:focus-visible{color:var(--cedula);text-decoration:underline}
 .foot-links--center{justify-content:center;margin-top:14px}
 .foot-links--center a{color:inherit}
+
+/* páginas de texto legal (/privacidade, /termos) */
+.policy{padding-top:48px;padding-bottom:72px;max-width:760px}
+.policy h1{margin-bottom:24px}
+.policy h3{margin:36px 0 10px}
+.policy p,.policy ul{margin:0 0 14px}
+.policy ul{padding-left:1.2em}
+.policy li{margin-bottom:8px}
+.policy code{font-family:'Geist Mono',monospace;font-size:.9em}
