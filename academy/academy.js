@@ -59,6 +59,8 @@ document.querySelectorAll('form.js-lead').forEach(form => {
       page_path: location.pathname, lead_canal: src.canal || '', lead_utm_source: src.utm_source || '',
       lead_utm_medium: src.utm_medium || '', lead_utm_campaign: src.utm_campaign || ''
     });
+    // conversão do Google Ads (track.js); só conta tipo "diagnostico"
+    try { if (window.quittaConversao) window.quittaConversao(tipo); } catch (e) {}
     say(tipo === 'diagnostico' ? 'Recebido — retornamos em até 5 dias úteis ✓'
       : tipo === 'material' ? 'Recebido — o material chega em até 1 dia útil ✓'
       : 'Inscrição recebida ✓');

@@ -34,6 +34,8 @@
       lead_canal: src.canal || '', lead_utm_source: src.utm_source || '',
       lead_utm_medium: src.utm_medium || '', lead_utm_campaign: src.utm_campaign || ''
     });
+    // conversão do Google Ads (track.js); só conta tipo "diagnostico"
+    try { if (window.quittaConversao) window.quittaConversao(get('tipo')); } catch (e) {}
   }
 
   document.querySelectorAll('form.js-contact').forEach(function (form) {
