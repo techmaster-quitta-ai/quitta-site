@@ -4,9 +4,10 @@
 // Nunca enviar e-mail, telefone ou outro dado pessoal nos eventos.
 (function () {
   var dl = window.dataLayer = window.dataLayer || [];
-  var CTA = 'a.q-btn, button.q-btn, a.hero-demo-link, .inline-cta a, a.nav-entrar, a.nav-entrar-pill, a.read-card, a[href^="mailto:"]';
+  var CTA = 'a.q-btn, button.q-btn, a.hero-demo-link, .inline-cta a, a.nav-entrar, a.nav-entrar-pill, a.read-card, a[href^="mailto:"], a[href^="https://wa.me/"]';
 
   function where(el) {
+    if (el.classList.contains('q-wa')) return 'floating';
     if (el.closest('nav') && !el.closest('main')) return 'nav';
     if (el.closest('footer')) return 'footer';
     var sec = el.closest('section[id], header[id]');
