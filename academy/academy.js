@@ -23,8 +23,12 @@ function notifyLead(data, saved) {
   });
   const sent = fetch(NOTIFY_ENDPOINT, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-    body: JSON.stringify(body)
+    // form-urlencoded é requisição simples (sem preflight), o que deixa o keepalive
+    // confiável em todo navegador; keepalive mantém o envio se o visitante fechar a aba,
+    // porque o FormSubmit leva de 30 a 60 s para responder
+    headers: { 'Accept': 'application/json' },
+    body: new URLSearchParams(body),
+    keepalive: true
   }).then(res => res.ok ? res.json() : {})
     .then(j => String(j.success) === 'true', () => false);
   const timeout = new Promise(resolve => setTimeout(() => resolve(false), 8000));
