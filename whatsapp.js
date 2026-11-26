@@ -2,7 +2,7 @@
 // É um link wa.me puro: não carrega widget, script nem cookie de terceiros.
 // Para trocar o número ou a mensagem, edite só este arquivo.
 (function () {
-  var NUMBER = '5511951277801';
+  var NUMBER = '5531999986721';
   var en = /^en\b/i.test(document.documentElement.lang || '');
   var copy = en
     ? { label: 'Chat on WhatsApp',
