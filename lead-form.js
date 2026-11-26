@@ -3,11 +3,17 @@
 // A API só guarda os campos do seu modelo; campo novo aqui exige ajuste lá, ou se
 // perde sem aviso. Isso vale para os campos de origem (canal, utm_*, gclid...) que
 // vêm de window.quittaOrigem(), definido em track.js.
-// Regra herdada: nunca confirmar um envio que não aconteceu. Se falhar, o lead
-// vê o erro e recebe o e-mail de contato.
+// A API grava o lead mas não avisa ninguém. Por isso todo envio também vai, por
+// e-mail, para a equipe via FormSubmit (NOTIFY_*), com o resultado do destino principal.
+// Regra herdada: nunca confirmar um envio que não aconteceu. Conta como recebido se
+// o destino principal OU o e-mail de aviso der certo, porque nos dois casos a equipe
+// tem o lead. Se os dois falharem, o lead vê o erro e recebe o e-mail de contato.
 (function () {
   var DEFAULT_ENDPOINT = 'https://app.quitta.ai/api/v1/site/leads';
   var FALLBACK_EMAIL = 'angelo@quitta.ai';
+  // Destinatário principal no caminho; cópias em _cc. Mesma configuração em academy/academy.js.
+  var NOTIFY_ENDPOINT = 'https://formsubmit.co/ajax/angelo@quitta.ai';
+  var NOTIFY_CC = 'esdras@quitta.ai,alexandre@quitta.ai';
   var en = document.documentElement.lang.toLowerCase().indexOf('en') === 0;
   var text = en ? {
     sending: 'Sending…',
@@ -38,6 +44,28 @@
     try { if (window.quittaConversao) window.quittaConversao(get('tipo')); } catch (e) {}
   }
 
+  // E-mail de aviso para a equipe. Resolve true só se o FormSubmit confirmar o envio
+  // (antes da ativação ele responde 200 com success "false").
+  function notify(data, endpoint, saved) {
+    var host = endpoint.split('/')[2];
+    var body = Object.assign({}, data, {
+      destino_principal: host + (saved ? ': gravado' : ': FALHOU, o lead só existe neste e-mail'),
+      _subject: 'Novo lead do site: ' + (data.empresa || data.company || 'sem empresa') +
+        ' (' + (data.tipo || 'contato EN') + ')',
+      _cc: NOTIFY_CC,
+      _template: 'table'
+    });
+    var sent = fetch(NOTIFY_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(body)
+    }).then(function (res) { return res.ok ? res.json() : {}; })
+      .then(function (j) { return String(j.success) === 'true'; }, function () { return false; });
+    // o visitante não espera mais que 8 s pelo aviso
+    var timeout = new Promise(function (resolve) { setTimeout(function () { resolve(false); }, 8000); });
+    return Promise.race([sent, timeout]);
+  }
+
   document.querySelectorAll('form.js-contact').forEach(function (form) {
     var btn = form.querySelector('button[type=submit]');
     var status = form.querySelector('.cta-status');
@@ -51,14 +79,20 @@
       btn.textContent = text.sending;
       status.textContent = text.sending;
       var src = origem();
+      var endpoint = form.getAttribute('data-endpoint') || DEFAULT_ENDPOINT;
+      // campos do formulário vencem os de origem se um dia tiverem o mesmo nome
+      var data = Object.assign({}, src, Object.fromEntries(new FormData(form)));
 
-      fetch(form.getAttribute('data-endpoint') || DEFAULT_ENDPOINT, {
+      fetch(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        // campos do formulário vencem os de origem se um dia tiverem o mesmo nome
-        body: JSON.stringify(Object.assign({}, src, Object.fromEntries(new FormData(form))))
-      }).then(function (res) {
-        if (!res.ok) throw new Error(res.status);
+        body: JSON.stringify(data)
+      }).then(function (res) { return res.ok; }, function () { return false; })
+        .then(function (saved) {
+          return notify(data, endpoint, saved).then(function (sent) {
+            if (!saved && !sent) throw new Error('lead não entregue');
+          });
+        }).then(function () {
         pushLead(form, src);
         btn.textContent = text.done;
         status.textContent = text.done;
